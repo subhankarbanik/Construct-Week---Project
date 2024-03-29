@@ -1,14 +1,118 @@
-body {
+* {
   padding: 0px;
   margin: 0px;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }
 
-.upper {
-  width: auto;
-  margin: auto;
-  max-width: 1920px;
+header {
+  background-image: url(Back\ Image.png);
   height: 860px;
-  background-image: url("./Frame.png");
+  background-position: center;
+  background-size: cover;
+}
+header nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 1320px;
+  height: 88px;
+  margin: auto;
+}
+header nav .klogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 611.84px;
+}
+header nav .klogo a:nth-of-type(1) {
+  color: #EB662B;
+}
+header nav .klogo a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 20px;
+  font-size: 14.77px;
+}
+header nav .klogo img {
+  width: 167px;
+  height: 32px;
+  margin-right: 30px;
+}
+header nav .links {
+  width: 367.92px;
+  margin-left: 113px;
+}
+header nav .links a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 20px;
+  font-size: 13.83px;
+}
+header nav .links #kbtn {
+  padding: 12px 20.8px 12px 21px;
+  background: none;
+  border-radius: 200px;
+  border: 1px solid black;
+}
+header section {
+  width: 880px;
+  height: 254px;
+  margin: 46px auto;
+}
+header section #kp {
+  width: 664px;
+  height: 151px;
+  font-size: 60px;
+  font-weight: 600;
+  align-items: center;
+  background: linear-gradient(90.84deg, #EE8C61 27.01%, #4C43C4 87.3%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 27px;
+}
+header section .kdestination {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  padding: 8px 0px;
+  border-radius: 200px;
+  height: 80px;
+  width: 850px;
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.0509803922);
+}
+header section .kdestination .kbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header section .kdestination .kbox div:nth-of-type(2) {
+  margin-right: 60px;
+}
+header section .kdestination .kbox div:nth-of-type(2) span {
+  font-size: 13px;
+  color: #717171;
+}
+header section .kdestination .kbox div:nth-of-type(2) h5 {
+  font-size: 14px;
+  font-weight: 400;
+}
+header section .kdestination .kbox .kcolor {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(235, 102, 43, 0.0509803922);
+  border-radius: 50px;
+  margin-right: 10px;
+}
+header section .kdestination .kbox #k4thcolor {
+  background-color: #EB662B;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
 }
 
 .middle {
