@@ -26,7 +26,7 @@ header nav .klogo {
   width: 611.84px;
 }
 header nav .klogo a:nth-of-type(1) {
-  color: #EB662B;
+  color: #eb662b;
 }
 header nav .klogo a {
   text-decoration: none;
@@ -66,7 +66,7 @@ header section #kp {
   font-size: 60px;
   font-weight: 600;
   align-items: center;
-  background: linear-gradient(90.84deg, #EE8C61 27.01%, #4C43C4 87.3%);
+  background: linear-gradient(90.84deg, #ee8c61 27.01%, #4c43c4 87.3%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -109,7 +109,7 @@ header section .kdestination .kbox .kcolor {
   margin-right: 10px;
 }
 header section .kdestination .kbox #k4thcolor {
-  background-color: #EB662B;
+  background-color: #eb662b;
   height: 50px;
   width: 50px;
   border-radius: 50px;
@@ -348,4 +348,83 @@ main p {
   line-height: 30px;
   letter-spacing: 0em;
   color: #05073c;
+}
+
+.Ac-blue-container {
+  max-width: 1920px;
+  margin: auto;
+  width: auto;
+  height: auto;
+  background-color: #05073c;
+  margin-top: 105px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.Ac-blue-container > div {
+  max-width: 1320px;
+  margin: auto;
+  width: auto;
+  height: auto;
+}
+.Ac-blue-container > div > div:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Ac-blue-container > div > div:nth-of-type(1) > h2 {
+  font-family: Inter;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: white;
+  margin-left: 15px;
+  margin-bottom: 0px;
+}
+.Ac-blue-container > div > div:nth-of-type(1) > a {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  color: white;
+  text-decoration: none;
+  margin-top: 21.88px;
+  margin-right: 40.8px;
+}
+.Ac-blue-container > div > div:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 45px;
+}
+.Ac-blue-container > div > div:nth-of-type(2) img {
+  background: linear-gradient(180deg, rgba(5, 7, 60, 0) 0%, #05073C 100%);
+  opacity: 70%;
+}
+
+.ac-card {
+  position: relative;
+}
+.ac-card h3 {
+  font-family: Inter;
+  font-size: 19.38px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: center;
+  color: #e7e6e6;
+}
+.ac-card p {
+  font-family: Inter;
+  font-size: 13.23px;
+  font-weight: 400;
+  line-height: 19.6px;
+  text-align: center;
+  color: #e7e6e6;
+}
+.ac-card > div > div {
+  position: relative;
+  top: -90px;
 }/*# sourceMappingURL=styles.css.map */
