@@ -1,2057 +1,1833 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anta&family=Delius+Swash+Caps&family=Inter:wght@100..900&family=Jacquarda+Bastarda+9&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Madimi+One&family=Micro+5&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shojumaru&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anta&family=Delius+Swash+Caps&family=Inter:wght@100..900&family=Jacquarda+Bastarda+9&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Madimi+One&family=Micro+5&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shojumaru&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-      ._1c8t70d {
-        position: relative;
-        width: 100%;
-      }
-      ._v2ig2y4 {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        outline: none;
-        width: 100%;
 
-        text-align: left;
-      }
-      #header-dropdown {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #fff;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        padding: 10px;
-        /* min-width: 100%; */
-        width: 1200px;
-        background-color: #f7f8fa;
-        z-index: 999;
-        display: none;
-        /* Add multi-column layout */
-        column-count: 3; /* Adjust the number of columns as needed */
-        column-gap: 20px; /* Adjust the gap between columns as needed */
-        background-image: url("https://cdn.kastatic.org/images/learn-menu/left-background.png"),
-          url("https://cdn.kastatic.org/images/learn-menu/right-background.png") !important;
-        background-position: center left, top -62px right 0px !important;
-        background-repeat: no-repeat !important;
-      }
-      ._1b2zmqj {
-        margin-bottom: 10px;
-      }
-      ._hsazh44,
-      ._4crv9hk {
-        display: block;
-        padding: 5px 0;
-        color: #3575f3;
-        text-decoration: none;
-        /* Adjust width for column items */
-        width: calc(
-          100% / 3 - 20px
-        ); /* Adjust based on the number of columns and column-gap */
-        /* Adjust box-sizing */
-        box-sizing: border-box;
-        font-size: 12px;
-      }
-      ._hsazh44 {
-        color: black;
-        font-size: 14px;
-      }
-      ._hsazh44:hover,
-      ._4crv9hk:hover {
-        background-color: #f5f5f5;
-      }
-      ._121xeo4 {
-        margin-top: 5px;
-      }
-      .Ac-nav {
-        width: auto;
-        max-width: 1200px;
-      }
-      .Ac-course {
-        color: #3575f3;
-        font-size: 16px;
-        font-weight: 700;
-      }
-      .Ac-input {
-        position: relative;
-      }
-      .Ac-search {
-        position: absolute;
-        left: 155px;
-        color: #929499;
-      }
-      .Ac-input-inner {
-        background-color: #f7f8fa;
-        border: none;
-        height: 40px;
-      }
-      .Ac-input-inner::placeholder {
-        color: #3575f3;
-        font-size: 16px;
-        font-weight: 600;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anta&family=Delius+Swash+Caps&family=Inter:wght@100..900&family=Jacquarda+Bastarda+9&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Madimi+One&family=Micro+5&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shojumaru&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=ZCOOL+KuaiLe&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anta&family=Delius+Swash+Caps&family=Inter:wght@100..900&family=Jacquarda+Bastarda+9&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Madimi+One&family=Micro+5&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shojumaru&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=ZCOOL+KuaiLe&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+    ._1c8t70d {
+      position: relative;
+      width: 100%;
+    }
+
+    ._v2ig2y4 {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      width: 100%;
+
+      text-align: left;
+    }
+
+    #header-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 10px;
+      /* min-width: 100%; */
+      width: 1200px;
+      background-color: #f7f8fa;
+      z-index: 999;
+      display: none;
+      /* Add multi-column layout */
+      column-count: 3;
+      /* Adjust the number of columns as needed */
+      column-gap: 20px;
+      /* Adjust the gap between columns as needed */
+      background-image: url("https://cdn.kastatic.org/images/learn-menu/left-background.png"),
+        url("https://cdn.kastatic.org/images/learn-menu/right-background.png") !important;
+      background-position: center left, top -62px right 0px !important;
+      background-repeat: no-repeat !important;
+    }
+
+    ._1b2zmqj {
+      margin-bottom: 10px;
+    }
+
+    ._hsazh44,
+    ._4crv9hk {
+      display: block;
+      padding: 5px 0;
+      color: #3575f3;
+      text-decoration: none;
+      /* Adjust width for column items */
+      width: calc(100% / 3 - 20px);
+      /* Adjust based on the number of columns and column-gap */
+      /* Adjust box-sizing */
+      box-sizing: border-box;
+      font-size: 12px;
+    }
+
+    ._hsazh44 {
+      color: black;
+      font-size: 14px;
+    }
+
+    ._hsazh44:hover,
+    ._4crv9hk:hover {
+      background-color: #f5f5f5;
+    }
+
+    ._121xeo4 {
+      margin-top: 5px;
+    }
+
+    .Ac-nav {
+      width: auto;
+      max-width: 1200px;
+    }
+
+    .Ac-course {
+      color: #3575f3;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .Ac-input {
+      position: relative;
+    }
+
+    .Ac-search {
+      position: absolute;
+      left: 155px;
+      color: #929499;
+    }
+
+    .Ac-input-inner {
+      background-color: #f7f8fa;
+      border: none;
+      height: 40px;
+    }
+
+    .Ac-input-inner::placeholder {
+      color: #3575f3;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .Ac-nav-div3 {
+      color: #3575f3;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .Ac-nav-div4 {
+      display: none !important;
+      color: #3575f3;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .Ac-header {
+      width: 100%;
+      height: auto;
+      border-bottom: 2px solid #ebebeb;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 766px) {
+      .Ac-nav-div4 {
+        display: block !important;
+        font-size: 27px !important;
+        gap: 50px !important;
       }
 
       .Ac-nav-div3 {
-        color: #3575f3;
-        font-size: 16px;
-        font-weight: 700;
-      }
-      .Ac-nav-div4 {
         display: none !important;
-        color: #3575f3;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        font-size: 22px;
-        font-weight: 700;
       }
+
+      .Ac-nav-div1 {
+        display: none !important;
+      }
+
       .Ac-header {
-        width: 100%;
-        height: auto;
-        border-bottom: 2px solid #ebebeb;
-        padding: 5px;
-        box-sizing: border-box;
+        background-color: #f6f6f6;
       }
-      @media (max-width: 766px) {
-        .Ac-nav-div4 {
-          display: block !important;
-          font-size: 27px !important;
-          gap: 50px !important;
-        }
-        .Ac-nav-div3 {
-          display: none !important;
-        }
-        .Ac-nav-div1 {
-          display: none !important;
-        }
-        .Ac-header {
-          background-color: #f6f6f6;
-        }
-      }
-      /*------------------------ Above nab var ------------------------------------------------------------------*/
-      /* Fahad Styles */
+    }
 
-      #F-container > .container-lg {
-        width: 80%;
-        gap: 60px;
-        font-family: "PT Serif", serif;
-      }
-      #F-container > .container-lg > div:nth-child(2) {
-        min-width: 55%;
-        margin-top: 80px;
-      }
-      #F-button > button {
-        min-width: 32%;
-      }
-      #F-button > button:nth-child(4) {
-        display: none;
-      }
+    /*------------------------ Above nab var ------------------------------------------------------------------*/
+    /* Fahad Styles */
 
-      #f-text-p {
-        max-width: 75%;
-      }
-      /* #F-text > h1:nth-of-type(3) {
+    #F-container>.container-lg {
+      width: 80%;
+      gap: 60px;
+      font-family: "PT Serif", serif;
+    }
+
+    #F-container>.container-lg>div:nth-child(2) {
+      min-width: 55%;
+      margin-top: 80px;
+    }
+
+    #F-button>button {
+      min-width: 32%;
+    }
+
+    #F-button>button:nth-child(4) {
+      display: none;
+    }
+
+    #f-text-p {
+      max-width: 75%;
+    }
+
+    /* #F-text > h1:nth-of-type(3) {
         text-decoration: underline #bfe6dd !important;
         background-color: #5ba26e;
       } */
-      @media (max-width: 768px) {
-        #F-container > .container-lg {
-          display: flex;
-          flex-direction: column !important;
-        }
-        #F-button > button:nth-child(4) {
-          width: 100%;
-        }
-      }
-      @media (max-width: 1024px) {
-        #F-button > button:nth-child(1) {
-          display: none;
-        }
-        #F-button > button:nth-child(2) {
-          display: none;
-        }
-        #F-button > button:nth-child(3) {
-          display: none;
-        }
-        #F-button > button:nth-child(4) {
-          display: block !important;
-        }
-      }
-      /* Fahad Styles */
-      .dropdown-menu.columns-2 {
-        min-width: 200px;
+    @media (max-width: 768px) {
+      #F-container>.container-lg {
+        display: flex;
+        flex-direction: column !important;
       }
 
-      .dropdown-menu.columns-2 .dropdown-item {
-        display: inline-block;
-        width: 50%;
-      }
-      .dropdown-menu.columns-2 {
-        background-color: #f5f5f5;
-        border: none;
-        color: #808185;
-        font-size: 1rem;
-      }
-      .dropdown-toggle {
+      #F-button>button:nth-child(4) {
         width: 100%;
-        text-align: left;
       }
-      .Ac-span:hover {
-        text-decoration: underline black;
-      }
-      .Ac-main {
-        gap: 40px;
-      }
-      .Ac-one {
-        gap: 50px;
-      }
-      .Ac-two {
-        gap: 50px;
-      }
-      .Ac-v {
-        display: block;
-        margin: auto;
-        background-color: #5ba26e;
-        border: none;
-        width: 40px;
-        height: 42px;
-        border-radius: 50%;
-        position: relative;
-        top: -15px;
-        color: #f5f5f5;
-      }
-      .Ac-a:hover {
-        text-decoration: underline #808185;
-      }
-      /* arijit css */
-      .heading{
-    display: flex;
-    justify-content: center;
-
-  }
-
-  .ar-h1 {
-    text-align: center;
-  }
-
-  .ar-container-2 {
-    width: 80%;
-    margin: 100px auto 200px auto;
-    padding: 0 20px;
-    /* gap: 80px; */
-    align-items: center;
-  }
-
-  .ar-container-2>.container-lg {
-    gap: 35%;
-  }
-
-  #ar-img-1>img {
-    width: 200%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  @media(max-width:1022px) {
-    .ar-container-2>.container-lg {
-      flex-direction: column !important;
-      justify-content: center !important;
-    }
-    .ar-container-2 img{
-      width: 500px !important;
-      height: 419px !important;
     }
 
-    .ar-container-2 img {
-      width: 758px;
-      height: 626px;
-      margin-top: 120px;
-    }
-  }
-
-  .ar-container-3 {
-    width: 80%;
-    margin: 100px auto 200px auto;
-    padding: 0 20px;
-    align-items: center;
-  }
-
-  .ar-container-3>.container-lg {
-    gap: 20%;
-  }
-
-  #ar-img-2>img {
-    width: 125%;
-    height: 70%;
-    object-fit: contain;
-  }
-
-  @media(max-width:1022px) {
-    .ar-container-3>.container-lg {
-      flex-direction: column-reverse !important;
-    }
-    #teacher-text{
-      margin: auto;
-      width: auto;
-    }
-    .ar-container-3 img{
-      width: 754px !important;
-      height: 619.26px !important;
-    }
-  }
-
-
-  .ar-container-3-img {
-    width: 1206px;
-    height: 487.6px;
-  }
-
-  #teacher-text{
-    margin: auto !important;
-  }
-  .ar-container-1{
-    margin: auto;
-    width: auto;
-    height: auto;
-    max-width: 1440px;
-  }
-
-  @media (max-width: 1023px) and (min-width: 768px) {
-  .cards  {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: left !important;
-    margin-bottom: 129px !important;
-  }
-  .cards img {
-    width: 104px !important;
-    height: 104px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .cards {
-   -webkit-box-align: center !important;
-    -ms-flex-align: center !important;
-    -webkit-box-direction: normal !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-flex-direction: column !important;
-    -ms-flex-direction: column !important;
-    flex-direction: column !important;
-    -webkit-align-items: center !important;
-    align-items: center !important;
-    margin-bottom: 129px !important;
-    
-  }
-}
-
-.ar-container-1 {
-  text-align: center; 
-}
-
-.cards .col {
-  margin-bottom: 20px; 
-}
-@media(max-width:768px){
-  .ar-container-3 img{
-    width: 508px !important;
-    height: 417px !important;
-  }
-}
-.ar-h3{
-  font-family: "Source Serif 4", serif;
-}
-.heading{
-  font-family: "Source Serif 4", serif;
-  padding: 40px 0 80px !important;
-}
-#ar-h2{
-  font-family: "Source Serif 4", serif;
-}
-.ar-p{
-  font-family: "Lato", sans-serif;
-}
-.ar-container-3{
-    background-color: #3575f3;
-}
-      /* arijit css end */
-      @import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
-      #s-container1 h2 {
-        font-weight: 300;
-      }
-      #s-image1 > img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-      #s-container2 > .container-lg > div {
-        min-width: 50%;
-      }
-
-      #s-container2 > .container-lg > div:nth-of-type(2) {
-        padding: 0px 80px 0px 80px;
-      }
-      #s-container2 > .container-lg > div > img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-      @media (max-width: 992px) {
-        #s-container2 > .container-lg {
-          flex-direction: column !important;
-        }
-      }
-      #s-container3 > .container-lg {
-        width: 50%;
-        height: 400px;
-        background-image: url("https://cdn.kastatic.org/images/lohp/last_chance_collage@2x.png");
-        background-size: contain;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        font-family: "PT Serif", serif;
-        padding: 60px 0px 300px 0px;
-      }
-
-      .join-khan > h1 {
-      }
-      #s-container3 > .container-lg > button {
-        width: 50%;
-      }
-      #s-container3 > .container-lg > button:hover {
-        border: 3px solid white;
-      }
-      #s-container3 > .container-lg > button:nth-of-type(5) {
+    @media (max-width: 1024px) {
+      #F-button>button:nth-child(1) {
         display: none;
       }
-      @media (max-width: 835px) {
-        #s-container3 > .container-lg > button:nth-of-type(4) {
-          display: none;
-        }
-        #s-container3 > .container-lg > button:nth-of-type(5) {
-          display: block;
-          background-color: #f5f5f5;
-          color: black;
-        }
-        .join-khan {
-          /* font-size: 30px; */
-          font-size: 2em;
-        }
+
+      #F-button>button:nth-child(2) {
+        display: none;
       }
-      #s-container4 {
-        padding: 150px 0px 150px 0px;
-        margin-top: 50px;
+
+      #F-button>button:nth-child(3) {
+        display: none;
+      }
+
+      #F-button>button:nth-child(4) {
+        display: block !important;
+      }
+    }
+
+    /* Fahad Styles */
+    .dropdown-menu.columns-2 {
+      min-width: 200px;
+    }
+
+    .dropdown-menu.columns-2 .dropdown-item {
+      display: inline-block;
+      width: 50%;
+    }
+
+    .dropdown-menu.columns-2 {
+      background-color: #f5f5f5;
+      border: none;
+      color: #808185;
+      font-size: 1rem;
+    }
+
+    .dropdown-toggle {
+      width: 100%;
+      text-align: left;
+    }
+
+    .Ac-span:hover {
+      text-decoration: underline black;
+    }
+
+    .Ac-main {
+      gap: 40px;
+    }
+
+    .Ac-one {
+      gap: 50px;
+    }
+
+    .Ac-two {
+      gap: 50px;
+    }
+
+    .Ac-v {
+      display: block;
+      margin: auto;
+      background-color: #5ba26e;
+      border: none;
+      width: 40px;
+      height: 42px;
+      border-radius: 50%;
+      position: relative;
+      top: -15px;
+      color: #f5f5f5;
+    }
+
+    .Ac-a:hover {
+      text-decoration: underline #808185;
+    }
+
+    /* arijit css */
+    .heading {
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .ar-h1 {
+      text-align: center;
+    }
+
+    .ar-container-2 {
+      width: 80%;
+      margin: 100px auto 200px auto;
+      padding: 0 20px;
+      /* gap: 80px; */
+      align-items: center;
+    }
+
+    .ar-container-2>.container-lg {
+      gap: 35%;
+    }
+
+    #ar-img-1>img {
+      width: 200%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @media(max-width:1022px) {
+      .ar-container-2>.container-lg {
+        flex-direction: column !important;
+        justify-content: center !important;
+      }
+
+      .ar-container-2 img {
+        width: 500px !important;
+        height: 419px !important;
+      }
+
+      .ar-container-2 img {
+        width: 758px;
+        height: 626px;
+        margin-top: 120px;
+      }
+    }
+
+    .ar-container-3 {
+      width: 80%;
+      margin: 100px auto 200px auto;
+      padding: 0 20px;
+      align-items: center;
+    }
+
+    .ar-container-3>.container-lg {
+      gap: 20%;
+    }
+
+    #ar-img-2>img {
+      width: 125%;
+      height: 70%;
+      object-fit: contain;
+    }
+
+    @media(max-width:1022px) {
+      .ar-container-3>.container-lg {
+        flex-direction: column-reverse !important;
+      }
+
+      #teacher-text {
+        margin: auto;
+        width: auto;
+      }
+
+      .ar-container-3 img {
+        width: 754px !important;
+        height: 619.26px !important;
+      }
+    }
+
+
+    .ar-container-3-img {
+      width: 1206px;
+      height: 487.6px;
+    }
+
+    #teacher-text {
+      margin: auto !important;
+    }
+
+    .ar-container-1 {
+      margin: auto;
+      width: auto;
+      height: auto;
+      max-width: 1440px;
+    }
+
+    @media (max-width: 1023px) and (min-width: 768px) {
+      .cards {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: left !important;
+        margin-bottom: 129px !important;
+      }
+
+      .cards img {
+        width: 104px !important;
+        height: 104px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+        -webkit-box-direction: normal !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+        -webkit-align-items: center !important;
+        align-items: center !important;
+        margin-bottom: 129px !important;
+
+      }
+    }
+
+    .ar-container-1 {
+      text-align: center;
+    }
+
+    .cards .col {
+      margin-bottom: 20px;
+    }
+
+    @media(max-width:768px) {
+      .ar-container-3 img {
+        width: 508px !important;
+        height: 417px !important;
+      }
+    }
+
+    .ar-h3 {
+      font-family: "Source Serif 4", serif;
+    }
+
+    .heading {
+      font-family: "Source Serif 4", serif;
+      padding: 40px 0 80px !important;
+    }
+
+    #ar-h2 {
+      font-family: "Source Serif 4", serif;
+    }
+
+    .ar-p {
+      font-family: "Lato", sans-serif;
+    }
+
+    .ar-container-3 {
+      background-color: #3575f3;
+    }
+
+    /* arijit css end */
+    @import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+    #s-container1 h2 {
+      font-weight: 300;
+    }
+
+    #s-image1>img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    #s-container2>.container-lg>div {
+      min-width: 50%;
+    }
+
+    #s-container2>.container-lg>div:nth-of-type(2) {
+      padding: 0px 80px 0px 80px;
+    }
+
+    #s-container2>.container-lg>div>img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 992px) {
+      #s-container2>.container-lg {
+        flex-direction: column !important;
+      }
+    }
+
+    #s-container3>.container-lg {
+      width: 50%;
+      height: 400px;
+      background-image: url("https://cdn.kastatic.org/images/lohp/last_chance_collage@2x.png");
+      background-size: contain;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      font-family: "PT Serif", serif;
+      padding: 60px 0px 300px 0px;
+    }
+
+    .join-khan>h1 {}
+
+    #s-container3>.container-lg>button {
+      width: 50%;
+    }
+
+    #s-container3>.container-lg>button:hover {
+      border: 3px solid white;
+    }
+
+    #s-container3>.container-lg>button:nth-of-type(5) {
+      display: none;
+    }
+
+    @media (max-width: 835px) {
+      #s-container3>.container-lg>button:nth-of-type(4) {
+        display: none;
+      }
+
+      #s-container3>.container-lg>button:nth-of-type(5) {
+        display: block;
         background-color: #f5f5f5;
-        font-family: "PT Serif", serif;
+        color: black;
       }
-      #s-container4 > .container-lg > div:nth-of-type(2) {
-        gap: 50px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+
+      .join-khan {
+        /* font-size: 30px; */
+        font-size: 2em;
       }
-      @media (max-width: 1200px) {
-        #s-container4 > .container-lg > div:nth-of-type(2) {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 60px;
-        }
+    }
+
+    #s-container4 {
+      padding: 150px 0px 150px 0px;
+      margin-top: 50px;
+      background-color: #f5f5f5;
+      font-family: "PT Serif", serif;
+    }
+
+    #s-container4>.container-lg>div:nth-of-type(2) {
+      gap: 50px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 1200px) {
+      #s-container4>.container-lg>div:nth-of-type(2) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
       }
-      @media (max-width: 768px) {
-        #s-container4 > .container-lg > div:nth-of-type(2) {
-          grid-template-columns: repeat(1, 1fr);
-          gap: 60px;
-        }
+    }
+
+    @media (max-width: 768px) {
+      #s-container4>.container-lg>div:nth-of-type(2) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 60px;
       }
-      #s-container4 > .container-lg > div:nth-of-type(2) > img {
-        width: 200px;
+    }
+
+    #s-container4>.container-lg>div:nth-of-type(2)>img {
+      width: 200px;
+    }
+
+    /* subhankar styles */
+    /* Kranti style start */
+    #kbox {
+      background-color: #0C2048;
+    }
+
+    footer {
+      display: flex;
+      /* background-color: #0C2048; */
+      color: white;
+      padding: 50px 120px;
+    }
+
+    .kcontainer {
+      display: flex;
+      margin-right: 200px;
+    }
+
+    .kcontainer div {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 13px 0px 13px;
+    }
+
+    .kcontainer div a {
+      text-decoration: none;
+      color: white;
+      font-size: 12px;
+      font-weight: 300;
+      padding: 9px 0px;
+    }
+
+    .kcontainer div img {
+      width: 110px;
+      padding: 5px;
+    }
+
+    .kcontainer-fluid {
+      width: 400px;
+      margin-right: 50px;
+    }
+
+    .kcontainer-fluid p {
+      font-size: 20px;
+      font-weight: 200;
+      padding-bottom: 15px;
+      color: #8294BA;
+    }
+
+    .kcontainer a:hover {
+      text-decoration: underline;
+    }
+
+    .kcontainer-fluid p a:hover {
+      text-decoration: underline;
+    }
+
+    .kcontainer-fluid p a {
+      text-decoration: none;
+      color: white;
+      font-family: "Noto Sans", sans-serif;
+    }
+
+    #kapps {
+      margin-top: 34px;
+    }
+
+    #kcontact {
+      color: #8294BA;
+    }
+
+    #kcourses {
+      color: #8294BA;
+    }
+
+    .klanguage {
+      background-color: #0C2048;
+      padding-left: 120px;
+      margin-top: -60px;
+      padding-bottom: 20px;
+    }
+
+    .klanguage img {
+      height: 12px;
+      width: 12px;
+    }
+
+    .klanguage a {
+      text-decoration: none;
+      color: white;
+      font-size: 12px;
+      margin: 10px 10px;
+    }
+
+    #kenglish {
+      background-color: #0C2048;
+      color: white;
+      border: none;
+    }
+
+    .klanguage div span {
+      color: #8294BA;
+    }
+
+    #kl {
+      color: #8294BA;
+    }
+
+    #kc {
+      font-size: 12px;
+    }
+
+    #kterms {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+    }
+
+    #klogos {
+      color: #9EA6B6;
+      padding-right: 100px;
+    }
+
+    #klogos i {
+      font-size: 25px;
+      margin: 0px 6px;
+    }
+
+    @media (max-width:770px) {
+      footer {
+        display: flex;
+        flex-direction: column;
       }
-      /* subhankar styles */
-    </style>
-  </head>
-  <body>
-    <header class="Ac-header">
-      <nav
-        class="Ac-nav d-flex justify-content-between align-items-center m-auto"
-      >
-        <div
-          class="Ac-nav-div1 d-flex justify-content-around align-items-center"
-        >
-          <div class="Ac-dropdown">
-            <div class="_1c8t70d">
-              <button
-                data-test-id="learn-menu-dropdown"
-                aria-expanded="false"
-                class="_v2ig2y4"
-                style="width: 100px"
-              >
-                <span
-                  data-learn-menu-trigger="true"
-                  data-test-id="learn-menu-button"
-                  class="Ac-course"
-                  >Courses<span class="_3zofox"
-                    ><span class="_19zgqrew"></span></span
-                ></span>
-              </button>
-              <div id="header-dropdown" class="_17fow1wv">
-                <ul class="_njywdf2" data-test-id="learn-menu">
-                  <li>
-                    <div class="_1b2zmqj" data-test-learn-menu-domain="math">
-                      <ul>
-                        <li data-navigable-index="0">
-                          <a
-                            tabindex="-1"
-                            class="_hsazh44"
-                            href="/math/in-math-ncert"
-                            ><span class="_1uk4ltt6">Math (NCERT)</span></a
-                          >
-                        </li>
-                      </ul>
-                      <ul class="_121xeo4">
-                        <li data-navigable-index="1">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 1"
-                            class="_4crv9hk"
-                            href="/math/in-in-class-1st-math-cbse"
-                            ><span class="_u1utz4z">Class 1</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="2">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 2"
-                            class="_4crv9hk"
-                            href="/math/in-in-class-2nd-math-cbse"
-                            ><span class="_u1utz4z">Class 2</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="3">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 3"
-                            class="_4crv9hk"
-                            href="/math/in-in-class-3rd-math-cbse"
-                            ><span class="_u1utz4z">Class 3</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="4">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 4"
-                            class="_4crv9hk"
-                            href="/math/in-in-class-4th-math-cbse"
-                            ><span class="_u1utz4z">Class 4</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="5">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 5"
-                            class="_4crv9hk"
-                            href="/math/in-in-class-5th-math-cbse"
-                            ><span class="_u1utz4z">Class 5</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="6">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 6"
-                            class="_4crv9hk"
-                            href="/math/ncert-class-6"
-                            ><span class="_u1utz4z">Class 6</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="7">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 7"
-                            class="_4crv9hk"
-                            href="/math/ncert-class-7"
-                            ><span class="_u1utz4z">Class 7</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="8">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 8"
-                            class="_4crv9hk"
-                            href="/math/ncert-class-8"
-                            ><span class="_u1utz4z">Class 8</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="9">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 9"
-                            class="_4crv9hk"
-                            href="/math/ncert-class-9"
-                            ><span class="_u1utz4z">Class 9</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="10">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 10"
-                            class="_4crv9hk"
-                            href="/math/ncert-class-10"
-                            ><span class="_u1utz4z">Class 10</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="11">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 11"
-                            class="_4crv9hk"
-                            href="/math/ncert-class-11"
-                            ><span class="_u1utz4z">Class 11</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="12">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 12"
-                            class="_4crv9hk"
-                            href="/math/ncert-class-12"
-                            ><span class="_u1utz4z">Class 12</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="13">
-                          <a
-                            tabindex="-1"
-                            aria-label="Board prep"
-                            class="_4crv9hk"
-                            href="/math/pa-board-prep-1"
-                            ><span class="_u1utz4z">Board prep</span>
-                            <div aria-hidden="true" class="_akfsuo"></div>
-                            <div class="_6oauft">
-                              <span class="_1ny02i68">NEW</span>
-                            </div></a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="_1b2zmqj" data-test-learn-menu-domain="math">
-                      <ul>
-                        <li data-navigable-index="14">
-                          <a
-                            tabindex="-1"
-                            class="_hsazh44"
-                            href="/math/in-in-math-foundations"
-                            ><span class="_1uk4ltt6">Math foundations</span></a
-                          >
-                        </li>
-                      </ul>
-                      <ul class="_121xeo4">
-                        <li data-navigable-index="15">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 6"
-                            class="_4crv9hk"
-                            href="/math/in-class-6-math-foundation"
-                            ><span class="_u1utz4z">Class 6</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="16">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 7"
-                            class="_4crv9hk"
-                            href="/math/in-class-7-math-foundation"
-                            ><span class="_u1utz4z">Class 7</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="17">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 8"
-                            class="_4crv9hk"
-                            href="/math/in-class-8-math-foundation"
-                            ><span class="_u1utz4z">Class 8</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="18">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 9"
-                            class="_4crv9hk"
-                            href="/math/in-class-9-math-foundation"
-                            ><span class="_u1utz4z">Class 9</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="19">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 10"
-                            class="_4crv9hk"
-                            href="/math/in-class-10-math-foundation"
-                            ><span class="_u1utz4z">Class 10</span></a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="_1b2zmqj" data-test-learn-menu-domain="math">
-                      <ul>
-                        <li data-navigable-index="20">
-                          <a
-                            tabindex="-1"
-                            class="_hsazh44"
-                            href="/math/math-r-mr"
-                            ><span class="_1uk4ltt6"
-                              >Math (Maharashtra)</span
-                            ></a
-                          >
-                        </li>
-                      </ul>
-                      <ul class="_121xeo4">
-                        <li data-navigable-index="21">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 1"
-                            class="_4crv9hk"
-                            href="/math/mr-class-1"
-                            ><span class="_u1utz4z">Class 1</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="22">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 2"
-                            class="_4crv9hk"
-                            href="/math/mr-class-2"
-                            ><span class="_u1utz4z">Class 2</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="23">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 3"
-                            class="_4crv9hk"
-                            href="/math/mr-class-3"
-                            ><span class="_u1utz4z">Class 3</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="24">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 4"
-                            class="_4crv9hk"
-                            href="/math/mr-class-4"
-                            ><span class="_u1utz4z">Class 4</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="25">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 5"
-                            class="_4crv9hk"
-                            href="/math/mr-class-5"
-                            ><span class="_u1utz4z">Class 5</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="26">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 6"
-                            class="_4crv9hk"
-                            href="/math/mr-class-6"
-                            ><span class="_u1utz4z">Class 6</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="27">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 7"
-                            class="_4crv9hk"
-                            href="/math/mr-class-7"
-                            ><span class="_u1utz4z">Class 7</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="28">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 8"
-                            class="_4crv9hk"
-                            href="/math/mr-class-8"
-                            ><span class="_u1utz4z">Class 8</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="29">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 9"
-                            class="_4crv9hk"
-                            href="/math/mr-class-9"
-                            ><span class="_u1utz4z">Class 9</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="30">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 10"
-                            class="_4crv9hk"
-                            href="/math/mr-class-10"
-                            ><span class="_u1utz4z">Class 10</span></a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="_1b2zmqj" data-test-learn-menu-domain="science">
-                      <ul>
-                        <li data-navigable-index="31">
-                          <a tabindex="-1" class="_hsazh44" href="/science/soe"
-                            ><span class="_1uk4ltt6">PACE (SOE Punjab)</span></a
-                          >
-                        </li>
-                      </ul>
-                      <ul class="_121xeo4">
-                        <li data-navigable-index="32">
-                          <a
-                            tabindex="-1"
-                            aria-label="Math"
-                            class="_4crv9hk"
-                            href="/math/soe-math"
-                            ><span class="_u1utz4z">Math</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="33">
-                          <a
-                            tabindex="-1"
-                            aria-label="Science"
-                            class="_4crv9hk"
-                            href="/science/soe-science"
-                            ><span class="_u1utz4z">Science</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="34">
-                          <a
-                            tabindex="-1"
-                            aria-label="English"
-                            class="_4crv9hk"
-                            href="/science/soe-english"
-                            ><span class="_u1utz4z">English</span></a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="_1b2zmqj" data-test-learn-menu-domain="science">
-                      <ul>
-                        <li data-navigable-index="35">
-                          <a
-                            tabindex="-1"
-                            class="_hsazh44"
-                            href="/science/in-science-ncert"
-                            ><span class="_1uk4ltt6">Science (NCERT)</span></a
-                          >
-                        </li>
-                      </ul>
-                      <ul class="_121xeo4">
-                        <li data-navigable-index="36">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 9 Phy"
-                            class="_4crv9hk"
-                            href="/science/in-in-class9th-physics-india"
-                            ><span class="_u1utz4z">Class 9 Phy</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="37">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 9 Chem"
-                            class="_4crv9hk"
-                            href="/science/class-9-chemistry"
-                            ><span class="_u1utz4z">Class 9 Chem</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="38">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 9 Bio"
-                            class="_4crv9hk"
-                            href="/science/class-9-biology-india"
-                            ><span class="_u1utz4z">Class 9 Bio</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="39">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 10 Phy"
-                            class="_4crv9hk"
-                            href="/science/in-in-class10th-physics"
-                            ><span class="_u1utz4z">Class 10 Phy</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="40">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 10 Chem"
-                            class="_4crv9hk"
-                            href="/science/in-in-class-10-chemistry-india"
-                            ><span class="_u1utz4z">Class 10 Chem</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="41">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 10 Bio"
-                            class="_4crv9hk"
-                            href="/science/in-in-class-10-biology"
-                            ><span class="_u1utz4z">Class 10 Bio</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="42">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 11 Phy"
-                            class="_4crv9hk"
-                            href="/science/in-in-class11th-physics"
-                            ><span class="_u1utz4z">Class 11 Phy</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="43">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 11 Chem"
-                            class="_4crv9hk"
-                            href="/science/class-11-chemistry-india"
-                            ><span class="_u1utz4z">Class 11 Chem</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="44">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 11 Bio"
-                            class="_4crv9hk"
-                            href="/science/in-in-class-11-biology-india"
-                            ><span class="_u1utz4z">Class 11 Bio</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="45">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 12 Phy"
-                            class="_4crv9hk"
-                            href="/science/in-in-class-12th-physics-india"
-                            ><span class="_u1utz4z">Class 12 Phy</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="46">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 12 Chem"
-                            class="_4crv9hk"
-                            href="/science/class-12-chemistry-india"
-                            ><span class="_u1utz4z">Class 12 Chem</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="47">
-                          <a
-                            tabindex="-1"
-                            aria-label="Class 12 Bio"
-                            class="_4crv9hk"
-                            href="/science/in-in-class-12-biology-india"
-                            ><span class="_u1utz4z">Class 12 Bio</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="48">
-                          <a
-                            tabindex="-1"
-                            aria-label="Essentials (9-12)"
-                            class="_4crv9hk"
-                            href="/science/in-science-essentials"
-                            ><span class="_u1utz4z">Essentials (9-12)</span></a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="_1b2zmqj" data-test-learn-menu-domain="math">
-                      <ul>
-                        <li data-navigable-index="49">
-                          <a
-                            tabindex="-1"
-                            class="_hsazh44"
-                            href="/math/scert-content"
-                            ><span class="_1uk4ltt6">All State boards</span></a
-                          >
-                        </li>
-                      </ul>
-                      <ul class="_121xeo4">
-                        <li data-navigable-index="50">
-                          <a
-                            tabindex="-1"
-                            aria-label="Punjab"
-                            class="_4crv9hk"
-                            href="/math/content-pa-1"
-                            ><span class="_u1utz4z">Punjab</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="51">
-                          <a
-                            tabindex="-1"
-                            aria-label="Uttar Pradesh"
-                            class="_4crv9hk"
-                            href="/math/content-up"
-                            ><span class="_u1utz4z">Uttar Pradesh</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="52">
-                          <a
-                            tabindex="-1"
-                            aria-label="Maharashtra"
-                            class="_4crv9hk"
-                            href="/math/content-mr-1"
-                            ><span class="_u1utz4z">Maharashtra</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="53">
-                          <a
-                            tabindex="-1"
-                            aria-label="Assam"
-                            class="_4crv9hk"
-                            href="/math/math-assam-1"
-                            ><span class="_u1utz4z">Assam</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="54">
-                          <a
-                            tabindex="-1"
-                            aria-label="Odisha"
-                            class="_4crv9hk"
-                            href="/math/math-od"
-                            ><span class="_u1utz4z">Odisha</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="55">
-                          <a
-                            tabindex="-1"
-                            aria-label="NCERT (Hinglish)"
-                            class="_4crv9hk"
-                            href="/math/hinglish"
-                            ><span class="_u1utz4z">NCERT (Hinglish)</span></a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <div
-                      class="_1b2zmqj"
-                      data-test-learn-menu-domain="college-careers-more"
-                    >
-                      <ul>
-                        <li data-navigable-index="56">
-                          <a
-                            tabindex="-1"
-                            class="_hsazh44"
-                            href="/in-in-explore-more"
-                            ><span class="_1uk4ltt6">Explore more</span></a
-                          >
-                        </li>
-                      </ul>
-                      <ul class="_121xeo4">
-                        <li data-navigable-index="57">
-                          <a
-                            tabindex="-1"
-                            aria-label="Digital SAT"
-                            href="/digital-sat/start"
-                            class="_4crv9hk"
-                            ><span class="_u1utz4z">Digital SAT</span>
-                            <div aria-hidden="true" class="_akfsuo"></div>
-                            <div class="_6oauft">
-                              <span class="_1ny02i68">NEW</span>
-                            </div></a
-                          >
-                        </li>
-                        <li data-navigable-index="58">
-                          <a
-                            tabindex="-1"
-                            aria-label="Grammar"
-                            class="_4crv9hk"
-                            href="/grammar"
-                            ><span class="_u1utz4z">Grammar</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="59">
-                          <a
-                            tabindex="-1"
-                            aria-label="Computer Programming"
-                            class="_4crv9hk"
-                            href="/computer-programming"
-                            ><span class="_u1utz4z"
-                              >Computer Programming</span
-                            ></a
-                          >
-                        </li>
-                        <li data-navigable-index="60">
-                          <a
-                            tabindex="-1"
-                            aria-label="Computer Science"
-                            class="_4crv9hk"
-                            href="/computer-science"
-                            ><span class="_u1utz4z">Computer Science</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="61">
-                          <a
-                            tabindex="-1"
-                            aria-label="World History"
-                            class="_4crv9hk"
-                            href="/world-history"
-                            ><span class="_u1utz4z">World History</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="62">
-                          <a
-                            tabindex="-1"
-                            aria-label="Macroeconomics"
-                            class="_4crv9hk"
-                            href="/macroeconomics"
-                            ><span class="_u1utz4z">Macroeconomics</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="63">
-                          <a
-                            tabindex="-1"
-                            aria-label="Microeconomics"
-                            class="_4crv9hk"
-                            href="/microeconomics"
-                            ><span class="_u1utz4z">Microeconomics</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="64">
-                          <a
-                            tabindex="-1"
-                            aria-label="Finance"
-                            class="_4crv9hk"
-                            href="/core-finance"
-                            ><span class="_u1utz4z">Finance</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="65">
-                          <a
-                            tabindex="-1"
-                            aria-label="Personal Finance"
-                            class="_4crv9hk"
-                            href="/personal-finance"
-                            ><span class="_u1utz4z">Personal Finance</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="66">
-                          <a
-                            tabindex="-1"
-                            aria-label="Financial Literacy"
-                            class="_4crv9hk"
-                            href="/financial-literacy"
-                            ><span class="_u1utz4z">Financial Literacy</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="67">
-                          <a
-                            tabindex="-1"
-                            aria-label="Social Media Literacy"
-                            class="_4crv9hk"
-                            href="/social-media-challenges-and-opportunities"
-                            ><span class="_u1utz4z"
-                              >Social Media Literacy</span
-                            ></a
-                          >
-                        </li>
-                        <li data-navigable-index="68">
-                          <a
-                            tabindex="-1"
-                            aria-label="AI for Education"
-                            class="_4crv9hk"
-                            href="/ai-for-education"
-                            ><span class="_u1utz4z">AI for Education</span></a
-                          >
-                        </li>
-                        <li data-navigable-index="69">
-                          <a
-                            tabindex="-1"
-                            aria-label="Wireless Philosophy"
-                            class="_4crv9hk"
-                            href="/wi-phi"
-                            ><span class="_u1utz4z"
-                              >Wireless Philosophy</span
-                            ></a
-                          >
-                        </li>
-                        <li data-navigable-index="70">
-                          <a
-                            tabindex="-1"
-                            aria-label="Learn to Learn"
-                            class="_4crv9hk"
-                            href="/learn-to-learn"
-                            ><span class="_u1utz4z">Learn to Learn</span></a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <div
-                      class="_1b2zmqj"
-                      data-test-learn-menu-domain="khan-for-educators-india"
-                    >
-                      <ul>
-                        <li data-navigable-index="71">
-                          <a
-                            tabindex="-1"
-                            class="_hsazh44"
-                            href="/khan-for-educators-india"
-                            ><span class="_1uk4ltt6"
-                              >Khan for Educators</span
-                            ></a
-                          >
-                        </li>
-                      </ul>
-                      <ul class="_121xeo4">
-                        <li data-navigable-index="72">
-                          <a
-                            tabindex="-1"
-                            aria-label="Khan for Educators (Beginner)"
-                            class="_4crv9hk"
-                            href="/khan-for-educators-india/khan-for-educators-for-teachers"
-                            ><span class="_u1utz4z"
-                              >Khan for Educators (Beginner)</span
-                            ></a
-                          >
-                        </li>
-                        <li data-navigable-index="73">
-                          <a
-                            tabindex="-1"
-                            aria-label="Khan for Educators (Advanced)"
-                            class="_4crv9hk"
-                            href="/khan-for-educators-india/khan-for-educators-advanced-course"
-                            ><span class="_u1utz4z"
-                              >Khan for Educators (Advanced)</span
-                            >
-                            <div aria-hidden="true" class="_akfsuo"></div>
-                            <div class="_6oauft">
-                              <span class="_1ny02i68">NEW</span>
-                            </div></a
-                          >
-                        </li>
-                        <li data-navigable-index="74">
-                          <a
-                            tabindex="-1"
-                            aria-label="Khan for Educators (Mentors)"
-                            class="_4crv9hk"
-                            href="/khan-for-educators-india/khan-for-educators-for-mentors"
-                            ><span class="_u1utz4z"
-                              >Khan for Educators (Mentors)</span
-                            ></a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+
+      footer .kcontainer-fluid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        text-align: center;
+      }
+
+      footer .kcontainer {
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer .kcontainer div:nth-of-type(1) {
+        margin-left: -100px;
+      }
+
+      footer #khelp {
+        margin-left: -112px;
+        margin-top: 40px;
+      }
+
+      footer .kcontainer #kdownloads {
+        margin: -730px 0px 0px 250px;
+        width: 10%;
+      }
+
+      footer .kcontainer #ksubjects {
+        margin: -325px 0px 0px 270px;
+        width: 50%;
+      }
+
+      .klanguage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 220px;
+        text-align: center;
+        margin-left: -90px;
+      }
+
+      .klanguage a {
+        font-size: 11px;
+      }
+
+      .klanguage #kterms,
+      #kkhan {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .klanguage #kterms,
+      #kkhan a {
+        margin: 4px;
+      }
+
+      .klanguage #kterms #klogos {
+        margin-left: 100px;
+        margin-top: 10px;
+      }
+
+      .klanguage #kterms #kkhan #ka {
+        font-size: 12px;
+        margin-top: 28px;
+      }
+
+      .klanguage #kterms #klogos i {
+        font-size: 20px;
+      }
+    }
+
+    @media(min-width:1200px) {
+      #kbox {
+        margin: auto;
+        width: 100%;
+      }
+
+      footer,
+      .klanguage {
+        max-width: 1400px;
+        margin: auto;
+      }
+    }
+
+    /* Kranti style end */
+  </style>
+</head>
+
+<body>
+  <header class="Ac-header">
+    <nav class="Ac-nav d-flex justify-content-between align-items-center m-auto">
+      <div class="Ac-nav-div1 d-flex justify-content-around align-items-center">
+        <div class="Ac-dropdown">
+          <div class="_1c8t70d">
+            <button data-test-id="learn-menu-dropdown" aria-expanded="false" class="_v2ig2y4" style="width: 100px">
+              <span data-learn-menu-trigger="true" data-test-id="learn-menu-button" class="Ac-course">Courses<span
+                  class="_3zofox"><span class="_19zgqrew"></span></span></span>
+            </button>
+            <div id="header-dropdown" class="_17fow1wv">
+              <ul class="_njywdf2" data-test-id="learn-menu">
+                <li>
+                  <div class="_1b2zmqj" data-test-learn-menu-domain="math">
+                    <ul>
+                      <li data-navigable-index="0">
+                        <a tabindex="-1" class="_hsazh44" href="/math/in-math-ncert"><span class="_1uk4ltt6">Math
+                            (NCERT)</span></a>
+                      </li>
+                    </ul>
+                    <ul class="_121xeo4">
+                      <li data-navigable-index="1">
+                        <a tabindex="-1" aria-label="Class 1" class="_4crv9hk"
+                          href="/math/in-in-class-1st-math-cbse"><span class="_u1utz4z">Class 1</span></a>
+                      </li>
+                      <li data-navigable-index="2">
+                        <a tabindex="-1" aria-label="Class 2" class="_4crv9hk"
+                          href="/math/in-in-class-2nd-math-cbse"><span class="_u1utz4z">Class 2</span></a>
+                      </li>
+                      <li data-navigable-index="3">
+                        <a tabindex="-1" aria-label="Class 3" class="_4crv9hk"
+                          href="/math/in-in-class-3rd-math-cbse"><span class="_u1utz4z">Class 3</span></a>
+                      </li>
+                      <li data-navigable-index="4">
+                        <a tabindex="-1" aria-label="Class 4" class="_4crv9hk"
+                          href="/math/in-in-class-4th-math-cbse"><span class="_u1utz4z">Class 4</span></a>
+                      </li>
+                      <li data-navigable-index="5">
+                        <a tabindex="-1" aria-label="Class 5" class="_4crv9hk"
+                          href="/math/in-in-class-5th-math-cbse"><span class="_u1utz4z">Class 5</span></a>
+                      </li>
+                      <li data-navigable-index="6">
+                        <a tabindex="-1" aria-label="Class 6" class="_4crv9hk" href="/math/ncert-class-6"><span
+                            class="_u1utz4z">Class 6</span></a>
+                      </li>
+                      <li data-navigable-index="7">
+                        <a tabindex="-1" aria-label="Class 7" class="_4crv9hk" href="/math/ncert-class-7"><span
+                            class="_u1utz4z">Class 7</span></a>
+                      </li>
+                      <li data-navigable-index="8">
+                        <a tabindex="-1" aria-label="Class 8" class="_4crv9hk" href="/math/ncert-class-8"><span
+                            class="_u1utz4z">Class 8</span></a>
+                      </li>
+                      <li data-navigable-index="9">
+                        <a tabindex="-1" aria-label="Class 9" class="_4crv9hk" href="/math/ncert-class-9"><span
+                            class="_u1utz4z">Class 9</span></a>
+                      </li>
+                      <li data-navigable-index="10">
+                        <a tabindex="-1" aria-label="Class 10" class="_4crv9hk" href="/math/ncert-class-10"><span
+                            class="_u1utz4z">Class 10</span></a>
+                      </li>
+                      <li data-navigable-index="11">
+                        <a tabindex="-1" aria-label="Class 11" class="_4crv9hk" href="/math/ncert-class-11"><span
+                            class="_u1utz4z">Class 11</span></a>
+                      </li>
+                      <li data-navigable-index="12">
+                        <a tabindex="-1" aria-label="Class 12" class="_4crv9hk" href="/math/ncert-class-12"><span
+                            class="_u1utz4z">Class 12</span></a>
+                      </li>
+                      <li data-navigable-index="13">
+                        <a tabindex="-1" aria-label="Board prep" class="_4crv9hk" href="/math/pa-board-prep-1"><span
+                            class="_u1utz4z">Board prep</span>
+                          <div aria-hidden="true" class="_akfsuo"></div>
+                          <div class="_6oauft">
+                            <span class="_1ny02i68">NEW</span>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="_1b2zmqj" data-test-learn-menu-domain="math">
+                    <ul>
+                      <li data-navigable-index="14">
+                        <a tabindex="-1" class="_hsazh44" href="/math/in-in-math-foundations"><span
+                            class="_1uk4ltt6">Math foundations</span></a>
+                      </li>
+                    </ul>
+                    <ul class="_121xeo4">
+                      <li data-navigable-index="15">
+                        <a tabindex="-1" aria-label="Class 6" class="_4crv9hk"
+                          href="/math/in-class-6-math-foundation"><span class="_u1utz4z">Class 6</span></a>
+                      </li>
+                      <li data-navigable-index="16">
+                        <a tabindex="-1" aria-label="Class 7" class="_4crv9hk"
+                          href="/math/in-class-7-math-foundation"><span class="_u1utz4z">Class 7</span></a>
+                      </li>
+                      <li data-navigable-index="17">
+                        <a tabindex="-1" aria-label="Class 8" class="_4crv9hk"
+                          href="/math/in-class-8-math-foundation"><span class="_u1utz4z">Class 8</span></a>
+                      </li>
+                      <li data-navigable-index="18">
+                        <a tabindex="-1" aria-label="Class 9" class="_4crv9hk"
+                          href="/math/in-class-9-math-foundation"><span class="_u1utz4z">Class 9</span></a>
+                      </li>
+                      <li data-navigable-index="19">
+                        <a tabindex="-1" aria-label="Class 10" class="_4crv9hk"
+                          href="/math/in-class-10-math-foundation"><span class="_u1utz4z">Class 10</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="_1b2zmqj" data-test-learn-menu-domain="math">
+                    <ul>
+                      <li data-navigable-index="20">
+                        <a tabindex="-1" class="_hsazh44" href="/math/math-r-mr"><span class="_1uk4ltt6">Math
+                            (Maharashtra)</span></a>
+                      </li>
+                    </ul>
+                    <ul class="_121xeo4">
+                      <li data-navigable-index="21">
+                        <a tabindex="-1" aria-label="Class 1" class="_4crv9hk" href="/math/mr-class-1"><span
+                            class="_u1utz4z">Class 1</span></a>
+                      </li>
+                      <li data-navigable-index="22">
+                        <a tabindex="-1" aria-label="Class 2" class="_4crv9hk" href="/math/mr-class-2"><span
+                            class="_u1utz4z">Class 2</span></a>
+                      </li>
+                      <li data-navigable-index="23">
+                        <a tabindex="-1" aria-label="Class 3" class="_4crv9hk" href="/math/mr-class-3"><span
+                            class="_u1utz4z">Class 3</span></a>
+                      </li>
+                      <li data-navigable-index="24">
+                        <a tabindex="-1" aria-label="Class 4" class="_4crv9hk" href="/math/mr-class-4"><span
+                            class="_u1utz4z">Class 4</span></a>
+                      </li>
+                      <li data-navigable-index="25">
+                        <a tabindex="-1" aria-label="Class 5" class="_4crv9hk" href="/math/mr-class-5"><span
+                            class="_u1utz4z">Class 5</span></a>
+                      </li>
+                      <li data-navigable-index="26">
+                        <a tabindex="-1" aria-label="Class 6" class="_4crv9hk" href="/math/mr-class-6"><span
+                            class="_u1utz4z">Class 6</span></a>
+                      </li>
+                      <li data-navigable-index="27">
+                        <a tabindex="-1" aria-label="Class 7" class="_4crv9hk" href="/math/mr-class-7"><span
+                            class="_u1utz4z">Class 7</span></a>
+                      </li>
+                      <li data-navigable-index="28">
+                        <a tabindex="-1" aria-label="Class 8" class="_4crv9hk" href="/math/mr-class-8"><span
+                            class="_u1utz4z">Class 8</span></a>
+                      </li>
+                      <li data-navigable-index="29">
+                        <a tabindex="-1" aria-label="Class 9" class="_4crv9hk" href="/math/mr-class-9"><span
+                            class="_u1utz4z">Class 9</span></a>
+                      </li>
+                      <li data-navigable-index="30">
+                        <a tabindex="-1" aria-label="Class 10" class="_4crv9hk" href="/math/mr-class-10"><span
+                            class="_u1utz4z">Class 10</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="_1b2zmqj" data-test-learn-menu-domain="science">
+                    <ul>
+                      <li data-navigable-index="31">
+                        <a tabindex="-1" class="_hsazh44" href="/science/soe"><span class="_1uk4ltt6">PACE (SOE
+                            Punjab)</span></a>
+                      </li>
+                    </ul>
+                    <ul class="_121xeo4">
+                      <li data-navigable-index="32">
+                        <a tabindex="-1" aria-label="Math" class="_4crv9hk" href="/math/soe-math"><span
+                            class="_u1utz4z">Math</span></a>
+                      </li>
+                      <li data-navigable-index="33">
+                        <a tabindex="-1" aria-label="Science" class="_4crv9hk" href="/science/soe-science"><span
+                            class="_u1utz4z">Science</span></a>
+                      </li>
+                      <li data-navigable-index="34">
+                        <a tabindex="-1" aria-label="English" class="_4crv9hk" href="/science/soe-english"><span
+                            class="_u1utz4z">English</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="_1b2zmqj" data-test-learn-menu-domain="science">
+                    <ul>
+                      <li data-navigable-index="35">
+                        <a tabindex="-1" class="_hsazh44" href="/science/in-science-ncert"><span
+                            class="_1uk4ltt6">Science (NCERT)</span></a>
+                      </li>
+                    </ul>
+                    <ul class="_121xeo4">
+                      <li data-navigable-index="36">
+                        <a tabindex="-1" aria-label="Class 9 Phy" class="_4crv9hk"
+                          href="/science/in-in-class9th-physics-india"><span class="_u1utz4z">Class 9 Phy</span></a>
+                      </li>
+                      <li data-navigable-index="37">
+                        <a tabindex="-1" aria-label="Class 9 Chem" class="_4crv9hk"
+                          href="/science/class-9-chemistry"><span class="_u1utz4z">Class 9 Chem</span></a>
+                      </li>
+                      <li data-navigable-index="38">
+                        <a tabindex="-1" aria-label="Class 9 Bio" class="_4crv9hk"
+                          href="/science/class-9-biology-india"><span class="_u1utz4z">Class 9 Bio</span></a>
+                      </li>
+                      <li data-navigable-index="39">
+                        <a tabindex="-1" aria-label="Class 10 Phy" class="_4crv9hk"
+                          href="/science/in-in-class10th-physics"><span class="_u1utz4z">Class 10 Phy</span></a>
+                      </li>
+                      <li data-navigable-index="40">
+                        <a tabindex="-1" aria-label="Class 10 Chem" class="_4crv9hk"
+                          href="/science/in-in-class-10-chemistry-india"><span class="_u1utz4z">Class 10 Chem</span></a>
+                      </li>
+                      <li data-navigable-index="41">
+                        <a tabindex="-1" aria-label="Class 10 Bio" class="_4crv9hk"
+                          href="/science/in-in-class-10-biology"><span class="_u1utz4z">Class 10 Bio</span></a>
+                      </li>
+                      <li data-navigable-index="42">
+                        <a tabindex="-1" aria-label="Class 11 Phy" class="_4crv9hk"
+                          href="/science/in-in-class11th-physics"><span class="_u1utz4z">Class 11 Phy</span></a>
+                      </li>
+                      <li data-navigable-index="43">
+                        <a tabindex="-1" aria-label="Class 11 Chem" class="_4crv9hk"
+                          href="/science/class-11-chemistry-india"><span class="_u1utz4z">Class 11 Chem</span></a>
+                      </li>
+                      <li data-navigable-index="44">
+                        <a tabindex="-1" aria-label="Class 11 Bio" class="_4crv9hk"
+                          href="/science/in-in-class-11-biology-india"><span class="_u1utz4z">Class 11 Bio</span></a>
+                      </li>
+                      <li data-navigable-index="45">
+                        <a tabindex="-1" aria-label="Class 12 Phy" class="_4crv9hk"
+                          href="/science/in-in-class-12th-physics-india"><span class="_u1utz4z">Class 12 Phy</span></a>
+                      </li>
+                      <li data-navigable-index="46">
+                        <a tabindex="-1" aria-label="Class 12 Chem" class="_4crv9hk"
+                          href="/science/class-12-chemistry-india"><span class="_u1utz4z">Class 12 Chem</span></a>
+                      </li>
+                      <li data-navigable-index="47">
+                        <a tabindex="-1" aria-label="Class 12 Bio" class="_4crv9hk"
+                          href="/science/in-in-class-12-biology-india"><span class="_u1utz4z">Class 12 Bio</span></a>
+                      </li>
+                      <li data-navigable-index="48">
+                        <a tabindex="-1" aria-label="Essentials (9-12)" class="_4crv9hk"
+                          href="/science/in-science-essentials"><span class="_u1utz4z">Essentials (9-12)</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="_1b2zmqj" data-test-learn-menu-domain="math">
+                    <ul>
+                      <li data-navigable-index="49">
+                        <a tabindex="-1" class="_hsazh44" href="/math/scert-content"><span class="_1uk4ltt6">All State
+                            boards</span></a>
+                      </li>
+                    </ul>
+                    <ul class="_121xeo4">
+                      <li data-navigable-index="50">
+                        <a tabindex="-1" aria-label="Punjab" class="_4crv9hk" href="/math/content-pa-1"><span
+                            class="_u1utz4z">Punjab</span></a>
+                      </li>
+                      <li data-navigable-index="51">
+                        <a tabindex="-1" aria-label="Uttar Pradesh" class="_4crv9hk" href="/math/content-up"><span
+                            class="_u1utz4z">Uttar Pradesh</span></a>
+                      </li>
+                      <li data-navigable-index="52">
+                        <a tabindex="-1" aria-label="Maharashtra" class="_4crv9hk" href="/math/content-mr-1"><span
+                            class="_u1utz4z">Maharashtra</span></a>
+                      </li>
+                      <li data-navigable-index="53">
+                        <a tabindex="-1" aria-label="Assam" class="_4crv9hk" href="/math/math-assam-1"><span
+                            class="_u1utz4z">Assam</span></a>
+                      </li>
+                      <li data-navigable-index="54">
+                        <a tabindex="-1" aria-label="Odisha" class="_4crv9hk" href="/math/math-od"><span
+                            class="_u1utz4z">Odisha</span></a>
+                      </li>
+                      <li data-navigable-index="55">
+                        <a tabindex="-1" aria-label="NCERT (Hinglish)" class="_4crv9hk" href="/math/hinglish"><span
+                            class="_u1utz4z">NCERT (Hinglish)</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="_1b2zmqj" data-test-learn-menu-domain="college-careers-more">
+                    <ul>
+                      <li data-navigable-index="56">
+                        <a tabindex="-1" class="_hsazh44" href="/in-in-explore-more"><span class="_1uk4ltt6">Explore
+                            more</span></a>
+                      </li>
+                    </ul>
+                    <ul class="_121xeo4">
+                      <li data-navigable-index="57">
+                        <a tabindex="-1" aria-label="Digital SAT" href="/digital-sat/start" class="_4crv9hk"><span
+                            class="_u1utz4z">Digital SAT</span>
+                          <div aria-hidden="true" class="_akfsuo"></div>
+                          <div class="_6oauft">
+                            <span class="_1ny02i68">NEW</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li data-navigable-index="58">
+                        <a tabindex="-1" aria-label="Grammar" class="_4crv9hk" href="/grammar"><span
+                            class="_u1utz4z">Grammar</span></a>
+                      </li>
+                      <li data-navigable-index="59">
+                        <a tabindex="-1" aria-label="Computer Programming" class="_4crv9hk"
+                          href="/computer-programming"><span class="_u1utz4z">Computer Programming</span></a>
+                      </li>
+                      <li data-navigable-index="60">
+                        <a tabindex="-1" aria-label="Computer Science" class="_4crv9hk" href="/computer-science"><span
+                            class="_u1utz4z">Computer Science</span></a>
+                      </li>
+                      <li data-navigable-index="61">
+                        <a tabindex="-1" aria-label="World History" class="_4crv9hk" href="/world-history"><span
+                            class="_u1utz4z">World History</span></a>
+                      </li>
+                      <li data-navigable-index="62">
+                        <a tabindex="-1" aria-label="Macroeconomics" class="_4crv9hk" href="/macroeconomics"><span
+                            class="_u1utz4z">Macroeconomics</span></a>
+                      </li>
+                      <li data-navigable-index="63">
+                        <a tabindex="-1" aria-label="Microeconomics" class="_4crv9hk" href="/microeconomics"><span
+                            class="_u1utz4z">Microeconomics</span></a>
+                      </li>
+                      <li data-navigable-index="64">
+                        <a tabindex="-1" aria-label="Finance" class="_4crv9hk" href="/core-finance"><span
+                            class="_u1utz4z">Finance</span></a>
+                      </li>
+                      <li data-navigable-index="65">
+                        <a tabindex="-1" aria-label="Personal Finance" class="_4crv9hk" href="/personal-finance"><span
+                            class="_u1utz4z">Personal Finance</span></a>
+                      </li>
+                      <li data-navigable-index="66">
+                        <a tabindex="-1" aria-label="Financial Literacy" class="_4crv9hk"
+                          href="/financial-literacy"><span class="_u1utz4z">Financial Literacy</span></a>
+                      </li>
+                      <li data-navigable-index="67">
+                        <a tabindex="-1" aria-label="Social Media Literacy" class="_4crv9hk"
+                          href="/social-media-challenges-and-opportunities"><span class="_u1utz4z">Social Media
+                            Literacy</span></a>
+                      </li>
+                      <li data-navigable-index="68">
+                        <a tabindex="-1" aria-label="AI for Education" class="_4crv9hk" href="/ai-for-education"><span
+                            class="_u1utz4z">AI for Education</span></a>
+                      </li>
+                      <li data-navigable-index="69">
+                        <a tabindex="-1" aria-label="Wireless Philosophy" class="_4crv9hk" href="/wi-phi"><span
+                            class="_u1utz4z">Wireless Philosophy</span></a>
+                      </li>
+                      <li data-navigable-index="70">
+                        <a tabindex="-1" aria-label="Learn to Learn" class="_4crv9hk" href="/learn-to-learn"><span
+                            class="_u1utz4z">Learn to Learn</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <div class="_1b2zmqj" data-test-learn-menu-domain="khan-for-educators-india">
+                    <ul>
+                      <li data-navigable-index="71">
+                        <a tabindex="-1" class="_hsazh44" href="/khan-for-educators-india"><span class="_1uk4ltt6">Khan
+                            for Educators</span></a>
+                      </li>
+                    </ul>
+                    <ul class="_121xeo4">
+                      <li data-navigable-index="72">
+                        <a tabindex="-1" aria-label="Khan for Educators (Beginner)" class="_4crv9hk"
+                          href="/khan-for-educators-india/khan-for-educators-for-teachers"><span class="_u1utz4z">Khan
+                            for Educators (Beginner)</span></a>
+                      </li>
+                      <li data-navigable-index="73">
+                        <a tabindex="-1" aria-label="Khan for Educators (Advanced)" class="_4crv9hk"
+                          href="/khan-for-educators-india/khan-for-educators-advanced-course"><span
+                            class="_u1utz4z">Khan for Educators (Advanced)</span>
+                          <div aria-hidden="true" class="_akfsuo"></div>
+                          <div class="_6oauft">
+                            <span class="_1ny02i68">NEW</span>
+                          </div>
+                        </a>
+                      </li>
+                      <li data-navigable-index="74">
+                        <a tabindex="-1" aria-label="Khan for Educators (Mentors)" class="_4crv9hk"
+                          href="/khan-for-educators-india/khan-for-educators-for-mentors"><span class="_u1utz4z">Khan
+                            for Educators (Mentors)</span></a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
-          <div
-            class="Ac-input d-flex justify-content-between align-items-center"
-          >
-            <input
-              type="text"
-              placeholder="Search
+        </div>
+        <div class="Ac-input d-flex justify-content-between align-items-center">
+          <input type="text" placeholder="Search
               
-            "
-              class="Ac-input-inner"
-            />
-            <span class="material-symbols-outlined Ac-search"> search </span>
-          </div>
+            " class="Ac-input-inner" />
+          <span class="material-symbols-outlined Ac-search"> search </span>
         </div>
-        <div class="Ac-nav-div2">
-          <img
-            src="https://blog.khanacademy.org/wp-content/uploads/2024/02/Khan-Logo.png"
-            alt=""
-            style="width: 200px"
-          />
-        </div>
-        <div
-          class="Ac-nav-div3 d-flex justify-content-around align-items-center gap-4"
-        >
-          <span>Donate</span>
+      </div>
+      <div class="Ac-nav-div2">
+        <img src="https://blog.khanacademy.org/wp-content/uploads/2024/02/Khan-Logo.png" alt="" style="width: 200px" />
+      </div>
+      <div class="Ac-nav-div3 d-flex justify-content-around align-items-center gap-4">
+        <span>Donate</span>
 
-          <span>Logi in</span><span>Sign up</span>
-        </div>
-        <div class="Ac-nav-div4">
-          <span class="material-symbols-outlined"> search </span>
-          <span class="material-symbols-outlined"> menu </span>
-        </div>
-      </nav>
-    </header>
-    <div id="F-container">
-      <div
-        class="container-lg d-flex justify-content-center align-center g-4 flex-row"
-      >
-        <div id="F-image">
-          <img
-            src="https://cdn.kastatic.org/images/lohp/hero_student_collage_IN_1x.png"
-            alt=""
-          />
-        </div>
-        <div id="F-text ">
-          <h1>For every student,</h1>
-          <h1>every classroom.</h1>
-          <h1 style="text-decoration: underline #bfe6dd">Real results.</h1>
-          <br />
-          <p id="f-text-p">
-            We’re a nonprofit with the mission to provide a free, world-class
-            education for anyone, anywhere.
-          </p>
-          <div id="F-button">
-            <button class="btn btn-primary btn-lg">Learners</button>
-            <button class="btn btn-primary btn-lg">Teachers</button>
-            <button class="btn btn-primary btn-lg">Parents</button>
-            <button class="btn btn-primary btn-lg">Start here</button>
-          </div>
+        <span>Logi in</span><span>Sign up</span>
+      </div>
+      <div class="Ac-nav-div4">
+        <span class="material-symbols-outlined"> search </span>
+        <span class="material-symbols-outlined"> menu </span>
+      </div>
+    </nav>
+  </header>
+  <div id="F-container">
+    <div class="container-lg d-flex justify-content-center align-center g-4 flex-row">
+      <div id="F-image">
+        <img src="https://cdn.kastatic.org/images/lohp/hero_student_collage_IN_1x.png" alt="" />
+      </div>
+      <div id="F-text ">
+        <h1>For every student,</h1>
+        <h1>every classroom.</h1>
+        <h1 style="text-decoration: underline #bfe6dd">Real results.</h1>
+        <br />
+        <p id="f-text-p">
+          We’re a nonprofit with the mission to provide a free, world-class
+          education for anyone, anywhere.
+        </p>
+        <div id="F-button">
+          <button class="btn btn-primary btn-lg">Learners</button>
+          <button class="btn btn-primary btn-lg">Teachers</button>
+          <button class="btn btn-primary btn-lg">Parents</button>
+          <button class="btn btn-primary btn-lg">Start here</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <main
-      class="m-auto d-flex justify-content-around align-items-cente mt-5 flex-wrap Ac-main"
-      style="
+  <main class="m-auto d-flex justify-content-around align-items-cente mt-5 flex-wrap Ac-main" style="
         max-width: 1200px;
         background-color: #f5f5f5;
         height: auto;
         padding: 40px 30px;
-      "
-    >
-      <div
-        class="Ac-one d-flex justify-content-center align-items-center flex-column"
-      >
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
+      ">
+    <div class="Ac-one d-flex justify-content-center align-items-center flex-column">
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
                 font-size: 22px;
                 font-weight: 500;
                 border: none;
 
                 /* box-sizing: border-box; */
                 /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png"
-                alt=""
-                style="
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png" alt="" style="
                   width: 45px;
                   height: 45px;
                   border-radius: 50%;
                   margin-right: 10px;
-                "
-              />
-              <span class="Ac-span">Math (NCERT)</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item Ac-a" href="#">Class 1</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 2</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 3</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 4</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 5</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 6</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 7</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item Ac-a" href="#">Class 8</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 9</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 10</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 11</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 12</a>
-                  <a class="dropdown-item Ac-a" href="#">Board prep</a>
-                </div>
+                " />
+            <span class="Ac-span">Math (NCERT)</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item Ac-a" href="#">Class 1</a>
+                <a class="dropdown-item Ac-a" href="#">Class 2</a>
+                <a class="dropdown-item Ac-a" href="#">Class 3</a>
+                <a class="dropdown-item Ac-a" href="#">Class 4</a>
+                <a class="dropdown-item Ac-a" href="#">Class 5</a>
+                <a class="dropdown-item Ac-a" href="#">Class 6</a>
+                <a class="dropdown-item Ac-a" href="#">Class 7</a>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
-                font-size: 22px;
-                font-weight: 500;
-                border: none;
-
-                /* box-sizing: border-box; */
-                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png"
-                alt=""
-                style="
-                  width: 45px;
-                  height: 45px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                "
-              />
-              <span class="Ac-span">Math foundations</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item Ac-a" href="#">Class 6</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 7</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 8</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item Ac-a" href="#">Class 9</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 10</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
-                font-size: 22px;
-                font-weight: 500;
-                border: none;
-
-                /* box-sizing: border-box; */
-                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png"
-                alt=""
-                style="
-                  width: 45px;
-                  height: 45px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                "
-              />
-              <span class="Ac-span">Math (Maharashtra)</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item Ac-a" href="#">Class 1</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 2</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 3</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 4</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 5</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item Ac-a" href="#">Class 6</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 7</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 8</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 9</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 10</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
-                font-size: 22px;
-                font-weight: 500;
-                border: none;
-
-                /* box-sizing: border-box; */
-                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/science_green.png-4ca7bf-128c.png"
-                alt=""
-                style="
-                  width: 45px;
-                  height: 45px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                "
-              />
-              <span class="Ac-span">PACE (SOE Punjab)</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item" href="#">Math</a>
-                  <a class="dropdown-item" href="#">Science</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item" href="#">English</a>
-                </div>
+              <div class="col">
+                <a class="dropdown-item Ac-a" href="#">Class 8</a>
+                <a class="dropdown-item Ac-a" href="#">Class 9</a>
+                <a class="dropdown-item Ac-a" href="#">Class 10</a>
+                <a class="dropdown-item Ac-a" href="#">Class 11</a>
+                <a class="dropdown-item Ac-a" href="#">Class 12</a>
+                <a class="dropdown-item Ac-a" href="#">Board prep</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="Ac-two one d-flex justify-content-center align-items-center flex-column"
-      >
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
                 font-size: 22px;
                 font-weight: 500;
                 border: none;
 
                 /* box-sizing: border-box; */
                 /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/science_green.png-4ca7bf-128c.png"
-                alt=""
-                style="
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png" alt="" style="
                   width: 45px;
                   height: 45px;
                   border-radius: 50%;
                   margin-right: 10px;
-                "
-              />
-              <span class="Ac-span">Science (NCERT)</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item Ac-a" href="#">Class 9 Phy</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 9 Chem</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 9 Bio</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 10 Phy</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 10 Chem</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 10 Bio</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 11 Phy</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item Ac-a" href="#">Class 11 Chem</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 11 Bio</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 12 Phy</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 12 Chem</a>
-                  <a class="dropdown-item Ac-a" href="#">Class 12 Bio</a>
-                  <a class="dropdown-item Ac-a" href="#">Essentials(9-12)</a>
-                </div>
+                " />
+            <span class="Ac-span">Math foundations</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item Ac-a" href="#">Class 6</a>
+                <a class="dropdown-item Ac-a" href="#">Class 7</a>
+                <a class="dropdown-item Ac-a" href="#">Class 8</a>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
-                font-size: 22px;
-                font-weight: 500;
-                border: none;
-
-                /* box-sizing: border-box; */
-                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png"
-                alt=""
-                style="
-                  width: 45px;
-                  height: 45px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                "
-              />
-              <span class="Ac-span">All State boards</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item Ac-a" href="#">Punjab</a>
-                  <a class="dropdown-item Ac-a" href="#">Uttar Prades</a>
-                  <a class="dropdown-item Ac-a" href="#">Maharastra</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item Ac-a" href="#">Assam</a>
-                  <a class="dropdown-item Ac-a" href="#">Odisha</a>
-                  <a class="dropdown-item Ac-a" href="#">NCERT (Hinglish)</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
-                font-size: 22px;
-                font-weight: 500;
-                border: none;
-
-                /* box-sizing: border-box; */
-                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/life_skills.png-1a4785-128c.png"
-                alt=""
-                style="
-                  width: 45px;
-                  height: 45px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                "
-              />
-              <span class="Ac-span">Explore more</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item Ac-a" href="#">Digital SAT</a>
-                  <a class="dropdown-item Ac-a" href="#">Grammar</a>
-                  <a class="dropdown-item Ac-a" href="#">Computer Program</a>
-                  <a class="dropdown-item Ac-a" href="#">Computer Science</a>
-                  <a class="dropdown-item Ac-a" href="#">World History</a>
-                  <a class="dropdown-item Ac-a" href="#">Macroeconomics</a>
-                  <a class="dropdown-item Ac-a" href="#">Microeconomics</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item Ac-a" href="#">Finance</a>
-                  <a class="dropdown-item Ac-a" href="#">Personal Finance</a>
-                  <a class="dropdown-item Ac-a" href="#">Financial Literacy</a>
-                  <a class="dropdown-item Ac-a" href="#"
-                    >Social Media Literacy</a
-                  >
-                  <a class="dropdown-item Ac-a" href="#">AI for Education</a>
-                  <a class="dropdown-item Ac-a" href="#">Learn to Learn</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
-                font-size: 22px;
-                font-weight: 500;
-                border: none;
-
-                /* box-sizing: border-box; */
-                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src=""
-                alt=""
-                style="
-                  width: 45px;
-                  height: 45px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                "
-              />
-              <span class="Ac-span">Khan for Educators</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item" href="#"
-                    >Khan for Educators <br />(Beginner)</a
-                  >
-                  <a class="dropdown-item" href="#"
-                    >Khan for Educators <br />
-                    (Advanced)</a
-                  >
-                </div>
-                <div class="col">
-                  <a class="dropdown-item" href="#"
-                    >Khan for Educators <br />(Mentors)</a
-                  >
-                </div>
+              <div class="col">
+                <a class="dropdown-item Ac-a" href="#">Class 9</a>
+                <a class="dropdown-item Ac-a" href="#">Class 10</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
-    <button class="Ac-v">V</button>
-    <!-- arijit code -->
-    <div class="ar-container-1">
-      <div class="heading" style="font-size: 44px; font-weight: 600">
-        <h1>Why khan acedemy works?</h1>
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
+                font-size: 22px;
+                font-weight: 500;
+                border: none;
+
+                /* box-sizing: border-box; */
+                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png" alt="" style="
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                " />
+            <span class="Ac-span">Math (Maharashtra)</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item Ac-a" href="#">Class 1</a>
+                <a class="dropdown-item Ac-a" href="#">Class 2</a>
+                <a class="dropdown-item Ac-a" href="#">Class 3</a>
+                <a class="dropdown-item Ac-a" href="#">Class 4</a>
+                <a class="dropdown-item Ac-a" href="#">Class 5</a>
+              </div>
+              <div class="col">
+                <a class="dropdown-item Ac-a" href="#">Class 6</a>
+                <a class="dropdown-item Ac-a" href="#">Class 7</a>
+                <a class="dropdown-item Ac-a" href="#">Class 8</a>
+                <a class="dropdown-item Ac-a" href="#">Class 9</a>
+                <a class="dropdown-item Ac-a" href="#">Class 10</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="container text-center">
-        <div class="row align-items-center cards ">
-          <div class="col text-center ">
-            <div class="card-1">
-              <img src="card-1.png" alt="" style="width: 106px; height: 107px;">
-            </div>
-            <div class="text">
-              <h3 class="ar-h3" style="font-size: 25px; font-weight: 400">
-                Personalized learning
-              </h3>
-              <p class="ar-p">Students practice at their own pace, first filling in gaps in their understanding and then accelerating
-                their learning.</p>
-            </div>
-          </div>
-          <div class="col text-center ">
-            <div class="card-2">
-              <img src="card-2.png" alt="" style="width: 127px; height: 125px;">
-            </div>
-            <div class="text">
-              <h3 class="ar-h3 "style="font-size: 25px; font-weight: 400">
-                Trusted Content
-              </h3>
-              <p class="ar-p">Created by experts, Khan Academy’s library of trusted, standards-aligned practice and lessons covers math
-                K-12 through early college, grammar, science, history, SAT®, and more. It’s all free for learners and
-                teachers.</p>
-            </div>
-          </div>
-          <div class="col text-center ">
-            <div class="card-3">
-              <img src="card-3.png" alt="" style="width: 109px; height: 106px;">
-            </div>
-            <div class="text">
-              <h3 class="ar-h3" style="font-size: 25px; font-weight: 400">
-                Tools to empower teachers
-              </h3>
-              <p class="ar-p">With Khan Academy, teachers can identify gaps in their students’ understanding, tailor instruction, and
-                meet the needs of every student.</p>
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
+                font-size: 22px;
+                font-weight: 500;
+                border: none;
+
+                /* box-sizing: border-box; */
+                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/science_green.png-4ca7bf-128c.png" alt=""
+              style="
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                " />
+            <span class="Ac-span">PACE (SOE Punjab)</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item" href="#">Math</a>
+                <a class="dropdown-item" href="#">Science</a>
+              </div>
+              <div class="col">
+                <a class="dropdown-item" href="#">English</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- teachers -->
-    <div class="ar-container-2">
-      <div class="container-lg d-flex justify-content-around align-items-center">
-        <div id="ar-img-1">
-          <img src="teachers.png" alt="">
+    <div class="Ac-two one d-flex justify-content-center align-items-center flex-column">
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
+                font-size: 22px;
+                font-weight: 500;
+                border: none;
+
+                /* box-sizing: border-box; */
+                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/science_green.png-4ca7bf-128c.png" alt=""
+              style="
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                " />
+            <span class="Ac-span">Science (NCERT)</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item Ac-a" href="#">Class 9 Phy</a>
+                <a class="dropdown-item Ac-a" href="#">Class 9 Chem</a>
+                <a class="dropdown-item Ac-a" href="#">Class 9 Bio</a>
+                <a class="dropdown-item Ac-a" href="#">Class 10 Phy</a>
+                <a class="dropdown-item Ac-a" href="#">Class 10 Chem</a>
+                <a class="dropdown-item Ac-a" href="#">Class 10 Bio</a>
+                <a class="dropdown-item Ac-a" href="#">Class 11 Phy</a>
+              </div>
+              <div class="col">
+                <a class="dropdown-item Ac-a" href="#">Class 11 Chem</a>
+                <a class="dropdown-item Ac-a" href="#">Class 11 Bio</a>
+                <a class="dropdown-item Ac-a" href="#">Class 12 Phy</a>
+                <a class="dropdown-item Ac-a" href="#">Class 12 Chem</a>
+                <a class="dropdown-item Ac-a" href="#">Class 12 Bio</a>
+                <a class="dropdown-item Ac-a" href="#">Essentials(9-12)</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="teacher-text">
-          <p class="ar-p" style="font-size: 14px; font-weight: 400; margin: 0 0 37px; color: rgba(33, 36, 44, 0.64)">
-            TEACHERS
-          </p>
-          <h2 id="ar-h2" style="font-weight: 600; font-size: 44px;">
-            “I’m finally able to truly <spam id="ar-span" style="text-decoration: underline; text-decoration-color: 
+      </div>
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
+                font-size: 22px;
+                font-weight: 500;
+                border: none;
+
+                /* box-sizing: border-box; */
+                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png" alt="" style="
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                " />
+            <span class="Ac-span">All State boards</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item Ac-a" href="#">Punjab</a>
+                <a class="dropdown-item Ac-a" href="#">Uttar Prades</a>
+                <a class="dropdown-item Ac-a" href="#">Maharastra</a>
+              </div>
+              <div class="col">
+                <a class="dropdown-item Ac-a" href="#">Assam</a>
+                <a class="dropdown-item Ac-a" href="#">Odisha</a>
+                <a class="dropdown-item Ac-a" href="#">NCERT (Hinglish)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
+                font-size: 22px;
+                font-weight: 500;
+                border: none;
+
+                /* box-sizing: border-box; */
+                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/life_skills.png-1a4785-128c.png" alt="" style="
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                " />
+            <span class="Ac-span">Explore more</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item Ac-a" href="#">Digital SAT</a>
+                <a class="dropdown-item Ac-a" href="#">Grammar</a>
+                <a class="dropdown-item Ac-a" href="#">Computer Program</a>
+                <a class="dropdown-item Ac-a" href="#">Computer Science</a>
+                <a class="dropdown-item Ac-a" href="#">World History</a>
+                <a class="dropdown-item Ac-a" href="#">Macroeconomics</a>
+                <a class="dropdown-item Ac-a" href="#">Microeconomics</a>
+              </div>
+              <div class="col">
+                <a class="dropdown-item Ac-a" href="#">Finance</a>
+                <a class="dropdown-item Ac-a" href="#">Personal Finance</a>
+                <a class="dropdown-item Ac-a" href="#">Financial Literacy</a>
+                <a class="dropdown-item Ac-a" href="#">Social Media Literacy</a>
+                <a class="dropdown-item Ac-a" href="#">AI for Education</a>
+                <a class="dropdown-item Ac-a" href="#">Learn to Learn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
+                font-size: 22px;
+                font-weight: 500;
+                border: none;
+
+                /* box-sizing: border-box; */
+                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
+              ">
+            <img src="" alt="" style="
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                " />
+            <span class="Ac-span">Khan for Educators</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item" href="#">Khan for Educators <br />(Beginner)</a>
+                <a class="dropdown-item" href="#">Khan for Educators <br />
+                  (Advanced)</a>
+              </div>
+              <div class="col">
+                <a class="dropdown-item" href="#">Khan for Educators <br />(Mentors)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <button class="Ac-v">V</button>
+  <!-- arijit code -->
+  <div class="ar-container-1">
+    <div class="heading" style="font-size: 44px; font-weight: 600">
+      <h1>Why khan acedemy works?</h1>
+    </div>
+    <div class="container text-center">
+      <div class="row align-items-center cards ">
+        <div class="col text-center ">
+          <div class="card-1">
+            <img src="card-1.png" alt="" style="width: 106px; height: 107px;">
+          </div>
+          <div class="text">
+            <h3 class="ar-h3" style="font-size: 25px; font-weight: 400">
+              Personalized learning
+            </h3>
+            <p class="ar-p">Students practice at their own pace, first filling in gaps in their understanding and then
+              accelerating
+              their learning.</p>
+          </div>
+        </div>
+        <div class="col text-center ">
+          <div class="card-2">
+            <img src="card-2.png" alt="" style="width: 127px; height: 125px;">
+          </div>
+          <div class="text">
+            <h3 class="ar-h3 " style="font-size: 25px; font-weight: 400">
+              Trusted Content
+            </h3>
+            <p class="ar-p">Created by experts, Khan Academy’s library of trusted, standards-aligned practice and
+              lessons covers math
+              K-12 through early college, grammar, science, history, SAT®, and more. It’s all free for learners and
+              teachers.</p>
+          </div>
+        </div>
+        <div class="col text-center ">
+          <div class="card-3">
+            <img src="card-3.png" alt="" style="width: 109px; height: 106px;">
+          </div>
+          <div class="text">
+            <h3 class="ar-h3" style="font-size: 25px; font-weight: 400">
+              Tools to empower teachers
+            </h3>
+            <p class="ar-p">With Khan Academy, teachers can identify gaps in their students’ understanding, tailor
+              instruction, and
+              meet the needs of every student.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- teachers -->
+  <div class="ar-container-2">
+    <div class="container-lg d-flex justify-content-around align-items-center">
+      <div id="ar-img-1">
+        <img src="teachers.png" alt="">
+      </div>
+      <div id="teacher-text">
+        <p class="ar-p" style="font-size: 14px; font-weight: 400; margin: 0 0 37px; color: rgba(33, 36, 44, 0.64)">
+          TEACHERS
+        </p>
+        <h2 id="ar-h2" style="font-weight: 600; font-size: 44px;">
+          “I’m finally able to truly <spam id="ar-span" style="text-decoration: underline; text-decoration-color: 
                 #bfe6dd;">Differentiate</spam> my classroom. This has been priceless
-            for my students’ engagement.”
-          </h2>
-          <p class="ar-p" style="font-size: 11px; font-weight: 400px; margin: 14px 0 0">
-            UDAYA LAKSHMI PALAPALA / Middle school Coordinator / Hyderabad, Telangana
-          </p>
-          <p class="ar-p" style="margin: 26px 0 42px 0;">
-            We empower teachers to support their entire classroom. 90% of US teachers who have used Khan Academy have
-            found us effective.
-          </p>
-          <button type="button" class="btn btn-primary btn-lg">Teachers, start here</button>
+          for my students’ engagement.”
+        </h2>
+        <p class="ar-p" style="font-size: 11px; font-weight: 400px; margin: 14px 0 0">
+          UDAYA LAKSHMI PALAPALA / Middle school Coordinator / Hyderabad, Telangana
+        </p>
+        <p class="ar-p" style="margin: 26px 0 42px 0;">
+          We empower teachers to support their entire classroom. 90% of US teachers who have used Khan Academy have
+          found us effective.
+        </p>
+        <button type="button" class="btn btn-primary btn-lg">Teachers, start here</button>
+      </div>
+    </div>
+  </div>
+  <!-- laptop -->
+  <div class="ar-container-3">
+    <div class="container-lg d-flex flex-row">
+
+      <div id="laptop-text">
+        <p class="ar-p" style="font-size: 14px; font-weight: 400; margin: 0 0 37px; color: rgba(33, 36, 44, 0.64)">
+          LERANERS AND STUDENTS
+        </p>
+        <h2 id="ar-h2" style="font-weight: 600; font-size: 44px;">
+          <span class="ar-span" style="background-color: #bfe6dd;">You</span> can learn anything.
+        </h2>
+        </h2>
+        <p class="ar-p" style="margin: 26px 0 42px 0;">
+          Build a deep, solid understanding in math, science, grammar, history, SAT®, and more.
+        </p>
+        <button type="button" class="btn btn-primary btn-lg">Learners, start here</button>
+      </div>
+      <div id="ar-img-2">
+        <img src="laptop.png" alt="" class="ar-laptop-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- arjit code end -->
+  <!-- subhankar code -->
+  <div id="s-container1" style="background-color: #f5f5f5">
+    <div class="container-lg mx-auto" style="width: 70%; padding: 150px 0px 150px 0px">
+      <div class="para1">
+        <h2>
+          “When I was a child, I used to fear mathematics. But now, I am in
+          love with mathematics because of Khan Academy.”
+        </h2>
+      </div>
+      <div id="s-1" style="margin-top: 50px" class="d-flex justify-content-end align-items-center gap-5">
+        <div class="">
+          <h4>ANJALI</h4>
+          <p>GURUGRAM, HARYANA</p>
+        </div>
+        <div id="s-image1" style="width: 150px; height: 150px">
+          <img src="https://cdn.kastatic.org/images/lohp/anjali-3.png" alt="" />
         </div>
       </div>
     </div>
-    <!-- laptop -->
-    <div class="ar-container-3">
-      <div class="container-lg d-flex flex-row">
-  
-        <div id="laptop-text">
-          <p class="ar-p" style="font-size: 14px; font-weight: 400; margin: 0 0 37px; color: rgba(33, 36, 44, 0.64)">
-            LERANERS AND STUDENTS
-          </p>
-          <h2 id="ar-h2" style="font-weight: 600; font-size: 44px;">
-            <span class="ar-span" style="background-color: #bfe6dd;">You</span> can learn anything.
-          </h2>
-          </h2>
-          <p class="ar-p" style="margin: 26px 0 42px 0;">
-            Build a deep, solid understanding in math, science, grammar, history, SAT®, and more.
-          </p>
-          <button type="button" class="btn btn-primary btn-lg">Learners, start here</button>
-        </div>
-        <div id="ar-img-2">
-          <img src="laptop.png" alt="" class="ar-laptop-img">
-        </div>
-      </div>
-    </div>
-  
-    <!-- arjit code end -->
-    <!-- subhankar code -->
-    <div id="s-container1" style="background-color: #f5f5f5">
-      <div
-        class="container-lg mx-auto"
-        style="width: 70%; padding: 150px 0px 150px 0px"
-      >
-        <div class="para1">
-          <h2>
-            “When I was a child, I used to fear mathematics. But now, I am in
-            love with mathematics because of Khan Academy.”
-          </h2>
-        </div>
-        <div
-          id="s-1"
-          style="margin-top: 50px"
-          class="d-flex justify-content-end align-items-center gap-5"
-        >
-          <div class="">
-            <h4>ANJALI</h4>
-            <p>GURUGRAM, HARYANA</p>
-          </div>
-          <div id="s-image1" style="width: 150px; height: 150px">
-            <img
-              src="https://cdn.kastatic.org/images/lohp/anjali-3.png"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="s-container2">
-      <div
-        class="container-lg d-flex flex-row mx-auto"
-        style="
+  </div>
+  <div id="s-container2">
+    <div class="container-lg d-flex flex-row mx-auto" style="
           width: 80%;
           padding: 50px 0px 50px 0px;
           gap: 80px;
           margin-top: 100px;
-        "
-      >
-        <div id="s-image2">
-          <img
-            src="https://cdn.kastatic.org/images/lohp/math-unicorn-donate-collage.png"
-            alt=""
-          />
-        </div>
-        <div id="chance">
-          <p style="opacity: 0.6">TOGETHER WE CAN MAKE A DIFFERENCE</p>
-          <br />
-          <h1>
-            <span style="border-bottom: 3px solid #bfe6dd">Every child </span>
-            deserves the chance to learn.
-          </h1>
-          <br />
-          <p class="fw-normal" style="font-size: 1.1em;">
-            Across the globe, 617 million children are missing basic math and
-            reading skills. We’re a nonprofit delivering the education they
-            need, and we need your help. You can change the course of a child’s
-            life.
-          </p>
-          <br />
-          <button class="btn btn-primary btn-lg">Give them the chance</button>
-        </div>
+        ">
+      <div id="s-image2">
+        <img src="https://cdn.kastatic.org/images/lohp/math-unicorn-donate-collage.png" alt="" />
+      </div>
+      <div id="chance">
+        <p style="opacity: 0.6">TOGETHER WE CAN MAKE A DIFFERENCE</p>
+        <br />
+        <h1>
+          <span style="border-bottom: 3px solid #bfe6dd">Every child </span>
+          deserves the chance to learn.
+        </h1>
+        <br />
+        <p class="fw-normal" style="font-size: 1.1em;">
+          Across the globe, 617 million children are missing basic math and
+          reading skills. We’re a nonprofit delivering the education they
+          need, and we need your help. You can change the course of a child’s
+          life.
+        </p>
+        <br />
+        <button class="btn btn-primary btn-lg">Give them the chance</button>
       </div>
     </div>
-    <div
-      id="s-container-3.5"
-      style="
+  </div>
+  <div id="s-container-3.5" style="
         margin-top: 120px;
         font-family: Plus Jakarta Sans, sans-serif;
         font-weight: 600;
-      "
-      ;
-    >
-      <h1 class="join-khan" style="text-align: center">
-        Join Khan Academy today
-      </h1>
-    </div>
+      " ;>
+    <h1 class="join-khan" style="text-align: center">
+      Join Khan Academy today
+    </h1>
+  </div>
 
-    <div id="s-container3">
-      <div
-        class="container-lg d-flex flex-column gap-2 justify-content-start align-items-center"
-      >
-        <button type="button" class="btn btn-primary btn-lg">Learners</button>
-        <button type="button" class="btn btn-primary btn-lg">Teachers</button>
-        <button type="button" class="btn btn-primary btn-lg">Parents</button>
-        <button type="button" class="btn btn-primary btn-lg">Give Today</button>
-        <button type="button" class="btn btn-primary btn-lg">Back</button>
+  <div id="s-container3">
+    <div class="container-lg d-flex flex-column gap-2 justify-content-start align-items-center">
+      <button type="button" class="btn btn-primary btn-lg">Learners</button>
+      <button type="button" class="btn btn-primary btn-lg">Teachers</button>
+      <button type="button" class="btn btn-primary btn-lg">Parents</button>
+      <button type="button" class="btn btn-primary btn-lg">Give Today</button>
+      <button type="button" class="btn btn-primary btn-lg">Back</button>
+    </div>
+  </div>
+  <div id="s-container4">
+    <div class="container-lg d-flex flex-column gap-4 justify-content-center align-items-center w-75">
+      <div>
+        <h3>Key supporters</h3>
+      </div>
+      <br />
+      <div class="row g-4">
+        <img src="https://cdn.kastatic.org/images/supporters-logos/bank-of-america-dark-gray@2x.png" alt="" />
+        <img src="https://cdn.kastatic.org/images/supporters-logos/college-board-dark-gray@2x.png" alt="" />
+        <img src="https://cdn.kastatic.org/images/supporters-logos/ann-and-john-doerr-dark-gray@2x.png" alt="" />
+        <img src="https://cdn.kastatic.org/images/supporters-logos/gates-foundation-dark-gray@2x.png" alt="" />
+        <img src="https://cdn.kastatic.org/images/supporters-logos/lemann-foundation-dark-gray@2x.png" alt="" />
+        <img src="https://cdn.kastatic.org/images/supporters-logos/carlos-rodriguez-pastor-dark-gray@2x.png" alt="" />
+        <img src="https://cdn.kastatic.org/images/supporters-logos/tata-trusts-dark-gray@2x.png" alt="" />
+        <img src="https://cdn.kastatic.org/images/supporters-logos/valhalla-dark-gray@2x.png" alt="" />
       </div>
     </div>
-    <div id="s-container4">
-      <div
-        class="container-lg d-flex flex-column gap-4 justify-content-center align-items-center w-75"
-      >
-        <div><h3>Key supporters</h3></div>
-        <br />
-        <div class="row g-4">
-          <img
-            src="https://cdn.kastatic.org/images/supporters-logos/bank-of-america-dark-gray@2x.png"
-            alt=""
-          />
-          <img
-            src="https://cdn.kastatic.org/images/supporters-logos/college-board-dark-gray@2x.png"
-            alt=""
-          />
-          <img
-            src="https://cdn.kastatic.org/images/supporters-logos/ann-and-john-doerr-dark-gray@2x.png"
-            alt=""
-          />
-          <img
-            src="https://cdn.kastatic.org/images/supporters-logos/gates-foundation-dark-gray@2x.png"
-            alt=""
-          />
-          <img
-            src="https://cdn.kastatic.org/images/supporters-logos/lemann-foundation-dark-gray@2x.png"
-            alt=""
-          />
-          <img
-            src="https://cdn.kastatic.org/images/supporters-logos/carlos-rodriguez-pastor-dark-gray@2x.png"
-            alt=""
-          />
-          <img
-            src="https://cdn.kastatic.org/images/supporters-logos/tata-trusts-dark-gray@2x.png"
-            alt=""
-          />
-          <img
-            src="https://cdn.kastatic.org/images/supporters-logos/valhalla-dark-gray@2x.png"
-            alt=""
-          />
+  </div>
+  <!-- subhankar -->
+  <!-- Kranti html Start -->
+  <div id="kbox">
+    <footer>
+      <div class="kcontainer-fluid">
+        <p>Our mission is to provide a free, world-class education to anyone, anywhere.</p>
+        <p>Khan Academy is a 501(c)(3) nonprofit organization. <a href="#">Donate <i
+              class="fa-solid fa-share-from-square"></i></a> or <a href="#">volunteer</a>today!</p>
+      </div>
+      <div class="kcontainer">
+        <div>
+          <a href="#">About</a>
+          <a href="#">News</a>
+          <a href="#">Impact <i class="fa-solid fa-share-from-square"></i></a>
+          <a href="#">Our team</a>
+          <a href="#">Our interns</a>
+          <a href="#">Our content specialists</a>
+          <a href="#">Our leadership</a>
+          <a href="#">Our supporters</a>
+          <a href="#">Our contributors</a>
+          <a href="#">Our finances</a>
+          <a href="#">Careers</a>
+          <a href="#">Internships</a>
+          <a href="#">Cookie Preferences</a>
+        </div>
+        <div>
+          <div id="khelp">
+            <a id="kcontact">Contact</a>
+            <a href="#">Help center</a>
+            <a href="#">Support community</a>
+            <a href="#">Share your story</a>
+            <a href="#">Press</a>
+          </div>
+          <div id="kdownloads">
+            <a id="kapps" href="#">Download our apps</a>
+            <img src="kStore img.svg" alt="">
+            <img src="kplay img.png" alt="">
+          </div>
+        </div>
+        <div id="ksubjects">
+          <a id="kcourses">Courses</a>
+          <a href="#">Math (NCERT)</a>
+          <a href="#">Math foundations</a>
+          <a href="#">Math (Maharashtra)</a>
+          <a href="#">PACE (SOE Punjab)</a>
+          <a href="#">Science (NCERT)</a>
+          <a href="#">All State boards</a>
+          <a href="#">Explore more</a>
+          <a href="#">Khan for Educators</a>
+        </div>
+      </div>
+    </footer>
+    <div class="klanguage">
+      <div>
+        <p><a href="#" id="kl">Language<select name="English" id="kenglish">English
+              <option value="English">English</option>
+            </select></a></p>
+        <div>
+          <span id="kc">Country</span>
+          <a href="#"><img src="./khan images/kus-flag.png" alt="">U.S.</a>
+          <a href="#"><img src="./khan images/kbrazil-flag.png" alt="">India</a>
+          <a href="#"><img src="./khan images/kmexico-flag.png" alt="">Mexico</a>
+          <a href="#"><img src="./khan images/kindia-flag.png" alt="">Brazil</a>
+        </div>
+      </div>
+      <div id="kterms">
+        <div id="kkhan">
+          <span id="ka">© 2024 Khan Academy</span>
+          <a href="#">Terms of use</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Notice</a>
+        </div>
+        <div id="klogos">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
         </div>
       </div>
     </div>
-<!-- subhankar -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-Ws3A1pTy8if/Huy86hvw3BdMVjQRYRg+/IlFD6GPnP8eDTKt6RJQLu7oSt+DTdA1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Custom JavaScript -->
-    <script>
-      $(document).ready(function () {
-        $("._v2ig2y4").click(function () {
-          $("#header-dropdown").toggle();
-        });
-        $("._4crv9hk").click(function () {
-          $("#header-dropdown").hide();
-        });
+  </div>
+  <!-- Kranti html End -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-Ws3A1pTy8if/Huy86hvw3BdMVjQRYRg+/IlFD6GPnP8eDTKt6RJQLu7oSt+DTdA1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    $(document).ready(function () {
+      $("._v2ig2y4").click(function () {
+        $("#header-dropdown").toggle();
       });
-    </script>
-  </body>
+      $("._4crv9hk").click(function () {
+        $("#header-dropdown").hide();
+      });
+    });
+  </script>
+</body>
 </html>

@@ -4,8 +4,9 @@
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
 }
+// adarsh and kranti start
 header {
-  background-image: url(Back\ Image.png);
+  background-image: url("./kbackground\ image.png");
   height: 860px;
   background-position: center;
   background-size: cover;
@@ -169,21 +170,57 @@ header {
   }
   > div:nth-of-type(1) {
     grid-area: a1;
+    h4{
+      margin-top: -45px;
+      margin-left:20px;
+      color:#FFFFFF;
+      font-weight:500 ;
+    }
   }
   > div:nth-of-type(2) {
     grid-area: a2;
+    h4{
+      margin-top: -45px;
+      margin-left:20px;
+      color:#FFFFFF;
+      font-weight:500 ;
+    }
   }
   > div:nth-of-type(3) {
     grid-area: a3;
+    h4{
+      margin-top: -45px;
+      margin-left:20px;
+      color:#FFFFFF;
+      font-weight:500 ;
+    }
   }
   > div:nth-of-type(4) {
     grid-area: a4;
+    h4{
+      margin-top: -45px;
+      margin-left:20px;
+      color:#FFFFFF;
+      font-weight:500 ;
+    }
   }
   > div:nth-of-type(5) {
     grid-area: a5;
+    h4{
+      margin-top: -45px;
+      margin-left:20px;
+      color:#FFFFFF;
+      font-weight:500 ;
+    }
   }
   > div:nth-of-type(6) {
     grid-area: a6;
+    h4{
+      margin-top: -45px;
+      margin-left:20px;
+      color:#FFFFFF;
+      font-weight:500 ;
+    }
   }
 }
 main {
@@ -430,6 +467,7 @@ main {
     
   }
 }
+// adarsh and kranti end
 // arijit css code
 .footer {
   max-width: 1920px;
