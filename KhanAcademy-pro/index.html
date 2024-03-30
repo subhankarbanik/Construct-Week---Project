@@ -146,51 +146,55 @@
         }
       }
       /*------------------------ Above nab var ------------------------------------------------------------------*/
-       /* Fahad Styles */
-       
+      /* Fahad Styles */
 
-#F-container > .container-lg {
-  width: 80%;
-  gap: 60px;
-  font-family: "PT Serif", serif;
-}
-#F-container > .container-lg > div:nth-child(2) {
-  min-width: 55%;
-  margin-top: 80px;
-}
-#F-button > button {
-  min-width: 32%;
-}
-#F-button > button:nth-child(4) {
-  display: none;
-}
-#F-text > p {
-  max-width: 85%;
-}
-@media (max-width: 768px) {
-  #F-container > .container-lg {
-    display: flex;
-    flex-direction: column !important;
-  }
-  #F-button > button:nth-child(4) {
-    width: 100%;
-  }
-}
-@media (max-width: 1024px) {
-  #F-button > button:nth-child(1) {
-    display: none;
-  }
-  #F-button > button:nth-child(2) {
-    display: none;
-  }
-  #F-button > button:nth-child(3) {
-    display: none;
-  }
-  #F-button > button:nth-child(4) {
-    display: block !important;
-  }
-}
-/* Fahad Styles */
+      #F-container > .container-lg {
+        width: 80%;
+        gap: 60px;
+        font-family: "PT Serif", serif;
+      }
+      #F-container > .container-lg > div:nth-child(2) {
+        min-width: 55%;
+        margin-top: 80px;
+      }
+      #F-button > button {
+        min-width: 32%;
+      }
+      #F-button > button:nth-child(4) {
+        display: none;
+      }
+
+      #f-text-p {
+        max-width: 75%;
+      }
+      /* #F-text > h1:nth-of-type(3) {
+        text-decoration: underline #bfe6dd !important;
+        background-color: #5ba26e;
+      } */
+      @media (max-width: 768px) {
+        #F-container > .container-lg {
+          display: flex;
+          flex-direction: column !important;
+        }
+        #F-button > button:nth-child(4) {
+          width: 100%;
+        }
+      }
+      @media (max-width: 1024px) {
+        #F-button > button:nth-child(1) {
+          display: none;
+        }
+        #F-button > button:nth-child(2) {
+          display: none;
+        }
+        #F-button > button:nth-child(3) {
+          display: none;
+        }
+        #F-button > button:nth-child(4) {
+          display: block !important;
+        }
+      }
+      /* Fahad Styles */
       .dropdown-menu.columns-2 {
         min-width: 200px;
       }
@@ -1068,14 +1072,17 @@
         class="container-lg d-flex justify-content-center align-center g-4 flex-row"
       >
         <div id="F-image">
-          <img src="https://cdn.kastatic.org/images/lohp/hero_student_collage_IN_1x.png" alt="" />
+          <img
+            src="https://cdn.kastatic.org/images/lohp/hero_student_collage_IN_1x.png"
+            alt=""
+          />
         </div>
         <div id="F-text ">
           <h1>For every student,</h1>
           <h1>every classroom.</h1>
-          <h1>Real results.</h1>
+          <h1 style="text-decoration: underline #bfe6dd">Real results.</h1>
           <br />
-          <p>
+          <p id="f-text-p">
             We’re a nonprofit with the mission to provide a free, world-class
             education for anyone, anywhere.
           </p>
@@ -1088,7 +1095,7 @@
         </div>
       </div>
     </div>
-  
+
     <main
       class="m-auto d-flex justify-content-around align-items-cente mt-5 flex-wrap Ac-main"
       style="
