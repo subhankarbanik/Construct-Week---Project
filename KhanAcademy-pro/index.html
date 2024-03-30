@@ -395,9 +395,102 @@
   font-family: "Lato", sans-serif;
 }
 .ar-container-3{
-  background-color: #3575f3;
+    background-color: #3575f3;
 }
       /* arijit css end */
+      @import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+      #s-container1 h2 {
+        font-weight: 300;
+      }
+      #s-image1 > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      #s-container2 > .container-lg > div {
+        min-width: 50%;
+      }
+
+      #s-container2 > .container-lg > div:nth-of-type(2) {
+        padding: 0px 80px 0px 80px;
+      }
+      #s-container2 > .container-lg > div > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      @media (max-width: 992px) {
+        #s-container2 > .container-lg {
+          flex-direction: column !important;
+        }
+      }
+      #s-container3 > .container-lg {
+        width: 50%;
+        height: 400px;
+        background-image: url("https://cdn.kastatic.org/images/lohp/last_chance_collage@2x.png");
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        font-family: "PT Serif", serif;
+        padding: 60px 0px 300px 0px;
+      }
+
+      .join-khan > h1 {
+      }
+      #s-container3 > .container-lg > button {
+        width: 50%;
+      }
+      #s-container3 > .container-lg > button:hover {
+        border: 3px solid white;
+      }
+      #s-container3 > .container-lg > button:nth-of-type(5) {
+        display: none;
+      }
+      @media (max-width: 835px) {
+        #s-container3 > .container-lg > button:nth-of-type(4) {
+          display: none;
+        }
+        #s-container3 > .container-lg > button:nth-of-type(5) {
+          display: block;
+          background-color: #f5f5f5;
+          color: black;
+        }
+        .join-khan {
+          /* font-size: 30px; */
+          font-size: 2em;
+        }
+      }
+      #s-container4 {
+        padding: 150px 0px 150px 0px;
+        margin-top: 50px;
+        background-color: #f5f5f5;
+        font-family: "PT Serif", serif;
+      }
+      #s-container4 > .container-lg > div:nth-of-type(2) {
+        gap: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @media (max-width: 1200px) {
+        #s-container4 > .container-lg > div:nth-of-type(2) {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 60px;
+        }
+      }
+      @media (max-width: 768px) {
+        #s-container4 > .container-lg > div:nth-of-type(2) {
+          grid-template-columns: repeat(1, 1fr);
+          gap: 60px;
+        }
+      }
+      #s-container4 > .container-lg > div:nth-of-type(2) > img {
+        width: 200px;
+      }
+      /* subhankar styles */
     </style>
   </head>
   <body>
@@ -1805,6 +1898,139 @@
     </div>
   
     <!-- arjit code end -->
+    <!-- subhankar code -->
+    <div id="s-container1" style="background-color: #f5f5f5">
+      <div
+        class="container-lg mx-auto"
+        style="width: 70%; padding: 150px 0px 150px 0px"
+      >
+        <div class="para1">
+          <h2>
+            “When I was a child, I used to fear mathematics. But now, I am in
+            love with mathematics because of Khan Academy.”
+          </h2>
+        </div>
+        <div
+          id="s-1"
+          style="margin-top: 50px"
+          class="d-flex justify-content-end align-items-center gap-5"
+        >
+          <div class="">
+            <h4>ANJALI</h4>
+            <p>GURUGRAM, HARYANA</p>
+          </div>
+          <div id="s-image1" style="width: 150px; height: 150px">
+            <img
+              src="https://cdn.kastatic.org/images/lohp/anjali-3.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="s-container2">
+      <div
+        class="container-lg d-flex flex-row mx-auto"
+        style="
+          width: 80%;
+          padding: 50px 0px 50px 0px;
+          gap: 80px;
+          margin-top: 100px;
+        "
+      >
+        <div id="s-image2">
+          <img
+            src="https://cdn.kastatic.org/images/lohp/math-unicorn-donate-collage.png"
+            alt=""
+          />
+        </div>
+        <div id="chance">
+          <p style="opacity: 0.6">TOGETHER WE CAN MAKE A DIFFERENCE</p>
+          <br />
+          <h1>
+            <span style="border-bottom: 3px solid #bfe6dd">Every child </span>
+            deserves the chance to learn.
+          </h1>
+          <br />
+          <p class="fw-normal" style="font-size: 1.1em;">
+            Across the globe, 617 million children are missing basic math and
+            reading skills. We’re a nonprofit delivering the education they
+            need, and we need your help. You can change the course of a child’s
+            life.
+          </p>
+          <br />
+          <button class="btn btn-primary btn-lg">Give them the chance</button>
+        </div>
+      </div>
+    </div>
+    <div
+      id="s-container-3.5"
+      style="
+        margin-top: 120px;
+        font-family: Plus Jakarta Sans, sans-serif;
+        font-weight: 600;
+      "
+      ;
+    >
+      <h1 class="join-khan" style="text-align: center">
+        Join Khan Academy today
+      </h1>
+    </div>
+
+    <div id="s-container3">
+      <div
+        class="container-lg d-flex flex-column gap-2 justify-content-start align-items-center"
+      >
+        <button type="button" class="btn btn-primary btn-lg">Learners</button>
+        <button type="button" class="btn btn-primary btn-lg">Teachers</button>
+        <button type="button" class="btn btn-primary btn-lg">Parents</button>
+        <button type="button" class="btn btn-primary btn-lg">Give Today</button>
+        <button type="button" class="btn btn-primary btn-lg">Back</button>
+      </div>
+    </div>
+    <div id="s-container4">
+      <div
+        class="container-lg d-flex flex-column gap-4 justify-content-center align-items-center w-75"
+      >
+        <div><h3>Key supporters</h3></div>
+        <br />
+        <div class="row g-4">
+          <img
+            src="https://cdn.kastatic.org/images/supporters-logos/bank-of-america-dark-gray@2x.png"
+            alt=""
+          />
+          <img
+            src="https://cdn.kastatic.org/images/supporters-logos/college-board-dark-gray@2x.png"
+            alt=""
+          />
+          <img
+            src="https://cdn.kastatic.org/images/supporters-logos/ann-and-john-doerr-dark-gray@2x.png"
+            alt=""
+          />
+          <img
+            src="https://cdn.kastatic.org/images/supporters-logos/gates-foundation-dark-gray@2x.png"
+            alt=""
+          />
+          <img
+            src="https://cdn.kastatic.org/images/supporters-logos/lemann-foundation-dark-gray@2x.png"
+            alt=""
+          />
+          <img
+            src="https://cdn.kastatic.org/images/supporters-logos/carlos-rodriguez-pastor-dark-gray@2x.png"
+            alt=""
+          />
+          <img
+            src="https://cdn.kastatic.org/images/supporters-logos/tata-trusts-dark-gray@2x.png"
+            alt=""
+          />
+          <img
+            src="https://cdn.kastatic.org/images/supporters-logos/valhalla-dark-gray@2x.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+<!-- subhankar -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-Ws3A1pTy8if/Huy86hvw3BdMVjQRYRg+/IlFD6GPnP8eDTKt6RJQLu7oSt+DTdA1"
