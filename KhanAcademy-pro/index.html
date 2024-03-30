@@ -70,9 +70,13 @@
       text-decoration: underline #808185;
     }
 
+    #kbox {
+      background-color: #0C2048;
+    }
+
     footer {
       display: flex;
-      background-color: #0C2048;
+      /* background-color: #0C2048; */
       color: white;
       padding: 50px 120px;
     }
@@ -192,13 +196,16 @@
       margin: 0px 6px;
     }
 
-    @media (max-width:767px) {
+    @media (max-width:770px) {
       footer {
         display: flex;
         flex-direction: column;
       }
 
       footer .kcontainer-fluid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: auto;
         text-align: center;
       }
@@ -219,7 +226,7 @@
 
       footer .kcontainer #kdownloads {
         margin: -730px 0px 0px 250px;
-        width: 50%;
+        width: 10%;
       }
 
       footer .kcontainer #ksubjects {
@@ -234,6 +241,7 @@
         align-items: center;
         padding-top: 220px;
         text-align: center;
+        margin-left: -90px;
       }
 
       .klanguage a {
@@ -254,7 +262,7 @@
       }
 
       .klanguage #kterms #klogos {
-        margin-left: 100px;
+        margin-left:100px;
         margin-top: 10px;
       }
 
@@ -265,6 +273,17 @@
 
       .klanguage #kterms #klogos i {
         font-size: 20px;
+      }
+    }
+
+    @media(min-width:1200px) {
+      #kbox {
+        margin: auto;
+        width: 100%;
+      }
+      footer, .klanguage{
+        max-width: 1400px;
+        margin:auto;
       }
     }
   </style>
@@ -585,79 +604,81 @@
   </main>
   <button class="v">V</button>
   <!-- Footer Start -->
-  <footer>
-    <div class="kcontainer-fluid">
-      <p>Our mission is to provide a free, world-class education to anyone, anywhere.</p>
-      <p>Khan Academy is a 501(c)(3) nonprofit organization. <a href="#">Donate <i
-            class="fa-solid fa-share-from-square"></i></a> or <a href="#">volunteer</a>today!</p>
-    </div>
-    <div class="kcontainer">
-      <div>
-        <a href="#">About</a>
-        <a href="#">News</a>
-        <a href="#">Impact <i class="fa-solid fa-share-from-square"></i></a>
-        <a href="#">Our team</a>
-        <a href="#">Our interns</a>
-        <a href="#">Our content specialists</a>
-        <a href="#">Our leadership</a>
-        <a href="#">Our supporters</a>
-        <a href="#">Our contributors</a>
-        <a href="#">Our finances</a>
-        <a href="#">Careers</a>
-        <a href="#">Internships</a>
-        <a href="#">Cookie Preferences</a>
+  <div id="kbox">
+    <footer>
+      <div class="kcontainer-fluid">
+        <p>Our mission is to provide a free, world-class education to anyone, anywhere.</p>
+        <p>Khan Academy is a 501(c)(3) nonprofit organization. <a href="#">Donate <i
+              class="fa-solid fa-share-from-square"></i></a> or <a href="#">volunteer</a>today!</p>
       </div>
-      <div>
-        <div id="khelp">
-          <a id="kcontact">Contact</a>
-          <a href="#">Help center</a>
-          <a href="#">Support community</a>
-          <a href="#">Share your story</a>
-          <a href="#">Press</a>
+      <div class="kcontainer">
+        <div>
+          <a href="#">About</a>
+          <a href="#">News</a>
+          <a href="#">Impact <i class="fa-solid fa-share-from-square"></i></a>
+          <a href="#">Our team</a>
+          <a href="#">Our interns</a>
+          <a href="#">Our content specialists</a>
+          <a href="#">Our leadership</a>
+          <a href="#">Our supporters</a>
+          <a href="#">Our contributors</a>
+          <a href="#">Our finances</a>
+          <a href="#">Careers</a>
+          <a href="#">Internships</a>
+          <a href="#">Cookie Preferences</a>
         </div>
-        <div id="kdownloads">
-          <a id="kapps" href="#">Download our apps</a>
-          <img src="kStore img.svg" alt="">
-          <img src="kplay img.png" alt="">
+        <div>
+          <div id="khelp">
+            <a id="kcontact">Contact</a>
+            <a href="#">Help center</a>
+            <a href="#">Support community</a>
+            <a href="#">Share your story</a>
+            <a href="#">Press</a>
+          </div>
+          <div id="kdownloads">
+            <a id="kapps" href="#">Download our apps</a>
+            <img src="kStore img.svg" alt="">
+            <img src="kplay img.png" alt="">
+          </div>
+        </div>
+        <div id="ksubjects">
+          <a id="kcourses">Courses</a>
+          <a href="#">Math (NCERT)</a>
+          <a href="#">Math foundations</a>
+          <a href="#">Math (Maharashtra)</a>
+          <a href="#">PACE (SOE Punjab)</a>
+          <a href="#">Science (NCERT)</a>
+          <a href="#">All State boards</a>
+          <a href="#">Explore more</a>
+          <a href="#">Khan for Educators</a>
         </div>
       </div>
-      <div id="ksubjects">
-        <a id="kcourses">Courses</a>
-        <a href="#">Math (NCERT)</a>
-        <a href="#">Math foundations</a>
-        <a href="#">Math (Maharashtra)</a>
-        <a href="#">PACE (SOE Punjab)</a>
-        <a href="#">Science (NCERT)</a>
-        <a href="#">All State boards</a>
-        <a href="#">Explore more</a>
-        <a href="#">Khan for Educators</a>
-      </div>
-    </div>
-  </footer>
-  <div class="klanguage">
-    <div>
-      <p><a href="#" id="kl">Language<select name="English" id="kenglish">English
-            <option value="English">English</option>
-          </select></a></p>
+    </footer>
+    <div class="klanguage">
       <div>
-        <span id="kc">Country</span>
-        <a href="#"><img src="kus-flag.png" alt="">U.S.</a>
-        <a href="#"><img src="kindia-flag.png" alt="">India</a>
-        <a href="#"><img src="kmexico-flag.png" alt="">Mexico</a>
-        <a href="#"><img src="kindia-flag.png" alt="">Brazil</a>
+        <p><a href="#" id="kl">Language<select name="English" id="kenglish">English
+              <option value="English">English</option>
+            </select></a></p>
+        <div>
+          <span id="kc">Country</span>
+          <a href="#"><img src="kus-flag.png" alt="">U.S.</a>
+          <a href="#"><img src="kindia-flag.png" alt="">India</a>
+          <a href="#"><img src="kmexico-flag.png" alt="">Mexico</a>
+          <a href="#"><img src="kindia-flag.png" alt="">Brazil</a>
+        </div>
       </div>
-    </div>
-    <div id="kterms">
-      <div id="kkhan">
-        <span id="ka">© 2024 Khan Academy</span>
-        <a href="#">Terms of use</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookie Notice</a>
-      </div>
-      <div id="klogos">
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-instagram"></i>
+      <div id="kterms">
+        <div id="kkhan">
+          <span id="ka">© 2024 Khan Academy</span>
+          <a href="#">Terms of use</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookie Notice</a>
+        </div>
+        <div id="klogos">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
       </div>
     </div>
   </div>
