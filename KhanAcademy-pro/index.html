@@ -1,525 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <style>
-      .dropdown-menu.columns-2 {
-        min-width: 200px;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <style>
+    .dropdown-menu.columns-2 {
+      min-width: 200px;
+    }
+
+    .dropdown-menu.columns-2 .dropdown-item {
+      display: inline-block;
+      width: 50%;
+    }
+
+    .dropdown-menu.columns-2 {
+      background-color: #f5f5f5;
+      border: none;
+      color: #808185;
+      font-size: 1rem;
+    }
+
+    .dropdown-toggle {
+      width: 100%;
+      text-align: left;
+    }
+
+    span:hover {
+      text-decoration: underline black;
+    }
+
+    main {
+      gap: 40px;
+    }
+
+    .one {
+      gap: 50px;
+    }
+
+    .two {
+      gap: 50px;
+    }
+
+    .v {
+      display: block;
+      margin: auto;
+      background-color: #5ba26e;
+      border: none;
+      width: 40px;
+      height: 42px;
+      border-radius: 50%;
+      position: relative;
+      top: -15px;
+      color: #f5f5f5;
+    }
+
+    a:hover {
+      text-decoration: underline #808185;
+    }
+
+    footer {
+      display: flex;
+      background-color: #0C2048;
+      color: white;
+      padding: 50px 120px;
+    }
+
+    .kcontainer {
+      display: flex;
+      margin-right: 200px;
+    }
+
+    .kcontainer div {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 13px 0px 13px;
+    }
+
+    .kcontainer div a {
+      text-decoration: none;
+      color: white;
+      font-size: 12px;
+      font-weight: 300;
+      padding: 9px 0px;
+    }
+
+    .kcontainer div img {
+      width: 110px;
+      padding: 5px;
+    }
+
+    .kcontainer-fluid {
+      width: 400px;
+      margin-right: 50px;
+    }
+
+    .kcontainer-fluid p {
+      font-size: 20px;
+      font-weight: 200;
+      padding-bottom: 15px;
+      color: #8294BA;
+    }
+
+    .kcontainer a:hover {
+      text-decoration: underline;
+    }
+
+    .kcontainer-fluid p a:hover {
+      text-decoration: underline;
+    }
+
+    .kcontainer-fluid p a {
+      text-decoration: none;
+      color: white;
+      font-family: "Noto Sans", sans-serif;
+    }
+
+    #kapps {
+      margin-top: 34px;
+    }
+
+    #kcontact {
+      color: #8294BA;
+    }
+
+    #kcourses {
+      color: #8294BA;
+    }
+
+    .klanguage {
+      background-color: #0C2048;
+      padding-left: 120px;
+      margin-top: -60px;
+      padding-bottom: 20px;
+    }
+
+    .klanguage img {
+      height: 12px;
+      width: 12px;
+    }
+
+    .klanguage a {
+      text-decoration: none;
+      color: white;
+      font-size: 12px;
+      margin: 10px 10px;
+    }
+
+    #kenglish {
+      background-color: #0C2048;
+      color: white;
+      border: none;
+    }
+
+    .klanguage div span {
+      color: #8294BA;
+    }
+
+    #kl {
+      color: #8294BA;
+    }
+
+    #kc {
+      font-size: 12px;
+    }
+
+    #kterms {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+    }
+
+    #klogos {
+      color: #9EA6B6;
+      padding-right: 100px;
+    }
+
+    #klogos i {
+      font-size: 25px;
+      margin: 0px 6px;
+    }
+
+    @media (max-width:767px) {
+      footer {
+        display: flex;
+        flex-direction: column;
       }
 
-      .dropdown-menu.columns-2 .dropdown-item {
-        display: inline-block;
+      footer .kcontainer-fluid {
+        margin: auto;
+        text-align: center;
+      }
+
+      footer .kcontainer {
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer .kcontainer div:nth-of-type(1) {
+        margin-left: -100px;
+      }
+
+      footer #khelp {
+        margin-left: -112px;
+        margin-top: 40px;
+      }
+
+      footer .kcontainer #kdownloads {
+        margin: -730px 0px 0px 250px;
         width: 50%;
       }
-      .dropdown-menu.columns-2 {
-        background-color: #f5f5f5;
-        border: none;
-        color: #808185;
-        font-size: 1rem;
+
+      footer .kcontainer #ksubjects {
+        margin: -325px 0px 0px 270px;
+        width: 50%;
       }
-      .dropdown-toggle {
-        width: 100%;
-        text-align: left;
+
+      .klanguage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 220px;
+        text-align: center;
       }
-      span:hover {
-        text-decoration: underline black;
+
+      .klanguage a {
+        font-size: 11px;
       }
-      main {
-        gap: 40px;
+
+      .klanguage #kterms,
+      #kkhan {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
-      .one {
-        gap: 50px;
+
+      .klanguage #kterms,
+      #kkhan a {
+        margin: 4px;
       }
-      .two {
-        gap: 50px;
+
+      .klanguage #kterms #klogos {
+        margin-left: 100px;
+        margin-top: 10px;
       }
-      .v {
-        display: block;
-        margin: auto;
-        background-color: #5ba26e;
-        border: none;
-        width: 40px;
-        height: 42px;
-        border-radius: 50%;
-        position: relative;
-        top: -15px;
-        color: #f5f5f5;
+
+      .klanguage #kterms #kkhan #ka {
+        font-size: 12px;
+        margin-top: 28px;
       }
-      a:hover {
-        text-decoration: underline #808185;
+
+      .klanguage #kterms #klogos i {
+        font-size: 20px;
       }
-    </style>
-  </head>
-  <body>
-    <main
-      class="m-auto d-flex justify-content-around align-items-cente mt-5 flex-wrap"
-      style="
+    }
+  </style>
+</head>
+
+<body>
+  <main class="m-auto d-flex justify-content-around align-items-cente mt-5 flex-wrap" style="
         max-width: 1200px;
         background-color: #f5f5f5;
         height: auto;
         padding: 40px 30px;
-      "
-    >
-      <div
-        class="one d-flex justify-content-center align-items-center flex-column"
-      >
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
+      ">
+    <div class="one d-flex justify-content-center align-items-center flex-column">
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
                 font-size: 22px;
                 font-weight: 500;
                 border: none;
 
                 /* box-sizing: border-box; */
                 /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png"
-                alt=""
-                style="
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png" alt="" style="
                   width: 45px;
                   height: 45px;
                   border-radius: 50%;
                   margin-right: 10px;
-                "
-              />
-              <span>Math (NCERT)</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item" href="#">Class 1</a>
-                  <a class="dropdown-item" href="#">Class 2</a>
-                  <a class="dropdown-item" href="#">Class 3</a>
-                  <a class="dropdown-item" href="#">Class 4</a>
-                  <a class="dropdown-item" href="#">Class 5</a>
-                  <a class="dropdown-item" href="#">Class 6</a>
-                  <a class="dropdown-item" href="#">Class 7</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item" href="#">Class 8</a>
-                  <a class="dropdown-item" href="#">Class 9</a>
-                  <a class="dropdown-item" href="#">Class 10</a>
-                  <a class="dropdown-item" href="#">Class 11</a>
-                  <a class="dropdown-item" href="#">Class 12</a>
-                  <a class="dropdown-item" href="#">Board prep</a>
-                </div>
+                " />
+            <span>Math (NCERT)</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item" href="#">Class 1</a>
+                <a class="dropdown-item" href="#">Class 2</a>
+                <a class="dropdown-item" href="#">Class 3</a>
+                <a class="dropdown-item" href="#">Class 4</a>
+                <a class="dropdown-item" href="#">Class 5</a>
+                <a class="dropdown-item" href="#">Class 6</a>
+                <a class="dropdown-item" href="#">Class 7</a>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
-                font-size: 22px;
-                font-weight: 500;
-                border: none;
-
-                /* box-sizing: border-box; */
-                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png"
-                alt=""
-                style="
-                  width: 45px;
-                  height: 45px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                "
-              />
-              <span>Math foundations</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item" href="#">Class 6</a>
-                  <a class="dropdown-item" href="#">Class 7</a>
-                  <a class="dropdown-item" href="#">Class 8</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item" href="#">Class 9</a>
-                  <a class="dropdown-item" href="#">Class 10</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
-                font-size: 22px;
-                font-weight: 500;
-                border: none;
-
-                /* box-sizing: border-box; */
-                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png"
-                alt=""
-                style="
-                  width: 45px;
-                  height: 45px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                "
-              />
-              <span>Math (Maharashtra)</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item" href="#">Class 1</a>
-                  <a class="dropdown-item" href="#">Class 2</a>
-                  <a class="dropdown-item" href="#">Class 3</a>
-                  <a class="dropdown-item" href="#">Class 4</a>
-                  <a class="dropdown-item" href="#">Class 5</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item" href="#">Class 6</a>
-                  <a class="dropdown-item" href="#">Class 7</a>
-                  <a class="dropdown-item" href="#">Class 8</a>
-                  <a class="dropdown-item" href="#">Class 9</a>
-                  <a class="dropdown-item" href="#">Class 10</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
-                font-size: 22px;
-                font-weight: 500;
-                border: none;
-
-                /* box-sizing: border-box; */
-                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/science_green.png-4ca7bf-128c.png"
-                alt=""
-                style="
-                  width: 45px;
-                  height: 45px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                "
-              />
-              <span>PACE (SOE Punjab)</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item" href="#">Math</a>
-                  <a class="dropdown-item" href="#">Science</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item" href="#">English</a>
-                </div>
+              <div class="col">
+                <a class="dropdown-item" href="#">Class 8</a>
+                <a class="dropdown-item" href="#">Class 9</a>
+                <a class="dropdown-item" href="#">Class 10</a>
+                <a class="dropdown-item" href="#">Class 11</a>
+                <a class="dropdown-item" href="#">Class 12</a>
+                <a class="dropdown-item" href="#">Board prep</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="two one d-flex justify-content-center align-items-center flex-column"
-      >
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
                 font-size: 22px;
                 font-weight: 500;
                 border: none;
 
                 /* box-sizing: border-box; */
                 /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/science_green.png-4ca7bf-128c.png"
-                alt=""
-                style="
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png" alt="" style="
                   width: 45px;
                   height: 45px;
                   border-radius: 50%;
                   margin-right: 10px;
-                "
-              />
-              <span>Science (NCERT)</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item" href="#">Class 9 Phy</a>
-                  <a class="dropdown-item" href="#">Class 9 Chem</a>
-                  <a class="dropdown-item" href="#">Class 9 Bio</a>
-                  <a class="dropdown-item" href="#">Class 10 Phy</a>
-                  <a class="dropdown-item" href="#">Class 10 Chem</a>
-                  <a class="dropdown-item" href="#">Class 10 Bio</a>
-                  <a class="dropdown-item" href="#">Class 11 Phy</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item" href="#">Class 11 Chem</a>
-                  <a class="dropdown-item" href="#">Class 11 Bio</a>
-                  <a class="dropdown-item" href="#">Class 12 Phy</a>
-                  <a class="dropdown-item" href="#">Class 12 Chem</a>
-                  <a class="dropdown-item" href="#">Class 12 Bio</a>
-                  <a class="dropdown-item" href="#">Essentials(9-12)</a>
-                </div>
+                " />
+            <span>Math foundations</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item" href="#">Class 6</a>
+                <a class="dropdown-item" href="#">Class 7</a>
+                <a class="dropdown-item" href="#">Class 8</a>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
-                font-size: 22px;
-                font-weight: 500;
-                border: none;
-
-                /* box-sizing: border-box; */
-                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png"
-                alt=""
-                style="
-                  width: 45px;
-                  height: 45px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                "
-              />
-              <span>All State boards</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item" href="#">Punjab</a>
-                  <a class="dropdown-item" href="#">Uttar Prades</a>
-                  <a class="dropdown-item" href="#">Maharastra</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item" href="#">Assam</a>
-                  <a class="dropdown-item" href="#">Odisha</a>
-                  <a class="dropdown-item" href="#">NCERT (Hinglish)</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
-                font-size: 22px;
-                font-weight: 500;
-                border: none;
-
-                /* box-sizing: border-box; */
-                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src="https://cdn.kastatic.org/genfiles/topic-icons/icons/life_skills.png-1a4785-128c.png"
-                alt=""
-                style="
-                  width: 45px;
-                  height: 45px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                "
-              />
-              <span>Explore more</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item" href="#">Digital SAT</a>
-                  <a class="dropdown-item" href="#">Grammar</a>
-                  <a class="dropdown-item" href="#">Computer Program</a>
-                  <a class="dropdown-item" href="#">Computer Science</a>
-                  <a class="dropdown-item" href="#">World History</a>
-                  <a class="dropdown-item" href="#">Macroeconomics</a>
-                  <a class="dropdown-item" href="#">Microeconomics</a>
-                </div>
-                <div class="col">
-                  <a class="dropdown-item" href="#">Finance</a>
-                  <a class="dropdown-item" href="#">Personal Finance</a>
-                  <a class="dropdown-item" href="#">Financial Literacy</a>
-                  <a class="dropdown-item" href="#">Social Media Literacy</a>
-                  <a class="dropdown-item" href="#">AI for Education</a>
-                  <a class="dropdown-item" href="#">Learn to Learn</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div
-            class="dropdown"
-            style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)"
-          >
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              style="
-                font-size: 22px;
-                font-weight: 500;
-                border: none;
-
-                /* box-sizing: border-box; */
-                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
-              "
-            >
-              <img
-                src=""
-                alt=""
-                style="
-                  width: 45px;
-                  height: 45px;
-                  border-radius: 50%;
-                  margin-right: 10px;
-                "
-              />
-              <span>Khan for Educators</span>
-            </button>
-            <div
-              class="dropdown-menu columns-2"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <div class="row">
-                <div class="col">
-                  <a class="dropdown-item" href="#"
-                    >Khan for Educators <br />(Beginner)</a
-                  >
-                  <a class="dropdown-item" href="#"
-                    >Khan for Educators <br />
-                    (Advanced)</a
-                  >
-                </div>
-                <div class="col">
-                  <a class="dropdown-item" href="#"
-                    >Khan for Educators <br />(Mentors)</a
-                  >
-                </div>
+              <div class="col">
+                <a class="dropdown-item" href="#">Class 9</a>
+                <a class="dropdown-item" href="#">Class 10</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
-    <button class="v">V</button>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-Ws3A1pTy8if/Huy86hvw3BdMVjQRYRg+/IlFD6GPnP8eDTKt6RJQLu7oSt+DTdA1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
+                font-size: 22px;
+                font-weight: 500;
+                border: none;
+
+                /* box-sizing: border-box; */
+                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png" alt="" style="
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                " />
+            <span>Math (Maharashtra)</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item" href="#">Class 1</a>
+                <a class="dropdown-item" href="#">Class 2</a>
+                <a class="dropdown-item" href="#">Class 3</a>
+                <a class="dropdown-item" href="#">Class 4</a>
+                <a class="dropdown-item" href="#">Class 5</a>
+              </div>
+              <div class="col">
+                <a class="dropdown-item" href="#">Class 6</a>
+                <a class="dropdown-item" href="#">Class 7</a>
+                <a class="dropdown-item" href="#">Class 8</a>
+                <a class="dropdown-item" href="#">Class 9</a>
+                <a class="dropdown-item" href="#">Class 10</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
+                font-size: 22px;
+                font-weight: 500;
+                border: none;
+
+                /* box-sizing: border-box; */
+                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/science_green.png-4ca7bf-128c.png" alt=""
+              style="
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                " />
+            <span>PACE (SOE Punjab)</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item" href="#">Math</a>
+                <a class="dropdown-item" href="#">Science</a>
+              </div>
+              <div class="col">
+                <a class="dropdown-item" href="#">English</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="two one d-flex justify-content-center align-items-center flex-column">
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
+                font-size: 22px;
+                font-weight: 500;
+                border: none;
+
+                /* box-sizing: border-box; */
+                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/science_green.png-4ca7bf-128c.png" alt=""
+              style="
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                " />
+            <span>Science (NCERT)</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item" href="#">Class 9 Phy</a>
+                <a class="dropdown-item" href="#">Class 9 Chem</a>
+                <a class="dropdown-item" href="#">Class 9 Bio</a>
+                <a class="dropdown-item" href="#">Class 10 Phy</a>
+                <a class="dropdown-item" href="#">Class 10 Chem</a>
+                <a class="dropdown-item" href="#">Class 10 Bio</a>
+                <a class="dropdown-item" href="#">Class 11 Phy</a>
+              </div>
+              <div class="col">
+                <a class="dropdown-item" href="#">Class 11 Chem</a>
+                <a class="dropdown-item" href="#">Class 11 Bio</a>
+                <a class="dropdown-item" href="#">Class 12 Phy</a>
+                <a class="dropdown-item" href="#">Class 12 Chem</a>
+                <a class="dropdown-item" href="#">Class 12 Bio</a>
+                <a class="dropdown-item" href="#">Essentials(9-12)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
+                font-size: 22px;
+                font-weight: 500;
+                border: none;
+
+                /* box-sizing: border-box; */
+                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/math.png-444b34-128c.png" alt="" style="
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                " />
+            <span>All State boards</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item" href="#">Punjab</a>
+                <a class="dropdown-item" href="#">Uttar Prades</a>
+                <a class="dropdown-item" href="#">Maharastra</a>
+              </div>
+              <div class="col">
+                <a class="dropdown-item" href="#">Assam</a>
+                <a class="dropdown-item" href="#">Odisha</a>
+                <a class="dropdown-item" href="#">NCERT (Hinglish)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
+                font-size: 22px;
+                font-weight: 500;
+                border: none;
+
+                /* box-sizing: border-box; */
+                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
+              ">
+            <img src="https://cdn.kastatic.org/genfiles/topic-icons/icons/life_skills.png-1a4785-128c.png" alt="" style="
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                " />
+            <span>Explore more</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item" href="#">Digital SAT</a>
+                <a class="dropdown-item" href="#">Grammar</a>
+                <a class="dropdown-item" href="#">Computer Program</a>
+                <a class="dropdown-item" href="#">Computer Science</a>
+                <a class="dropdown-item" href="#">World History</a>
+                <a class="dropdown-item" href="#">Macroeconomics</a>
+                <a class="dropdown-item" href="#">Microeconomics</a>
+              </div>
+              <div class="col">
+                <a class="dropdown-item" href="#">Finance</a>
+                <a class="dropdown-item" href="#">Personal Finance</a>
+                <a class="dropdown-item" href="#">Financial Literacy</a>
+                <a class="dropdown-item" href="#">Social Media Literacy</a>
+                <a class="dropdown-item" href="#">AI for Education</a>
+                <a class="dropdown-item" href="#">Learn to Learn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="dropdown" style="width: 25em; border-bottom: 1px solid rgba(33, 36, 44, 0.32)">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false" style="
+                font-size: 22px;
+                font-weight: 500;
+                border: none;
+
+                /* box-sizing: border-box; */
+                /* border-bottom: 1px solid rgba(33, 36, 44, 0.32); */
+              ">
+            <img src="" alt="" style="
+                  width: 45px;
+                  height: 45px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+                " />
+            <span>Khan for Educators</span>
+          </button>
+          <div class="dropdown-menu columns-2" aria-labelledby="dropdownMenuButton">
+            <div class="row">
+              <div class="col">
+                <a class="dropdown-item" href="#">Khan for Educators <br />(Beginner)</a>
+                <a class="dropdown-item" href="#">Khan for Educators <br />
+                  (Advanced)</a>
+              </div>
+              <div class="col">
+                <a class="dropdown-item" href="#">Khan for Educators <br />(Mentors)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <button class="v">V</button>
+  <!-- Footer Start -->
+  <footer>
+    <div class="kcontainer-fluid">
+      <p>Our mission is to provide a free, world-class education to anyone, anywhere.</p>
+      <p>Khan Academy is a 501(c)(3) nonprofit organization. <a href="#">Donate <i
+            class="fa-solid fa-share-from-square"></i></a> or <a href="#">volunteer</a>today!</p>
+    </div>
+    <div class="kcontainer">
+      <div>
+        <a href="#">About</a>
+        <a href="#">News</a>
+        <a href="#">Impact <i class="fa-solid fa-share-from-square"></i></a>
+        <a href="#">Our team</a>
+        <a href="#">Our interns</a>
+        <a href="#">Our content specialists</a>
+        <a href="#">Our leadership</a>
+        <a href="#">Our supporters</a>
+        <a href="#">Our contributors</a>
+        <a href="#">Our finances</a>
+        <a href="#">Careers</a>
+        <a href="#">Internships</a>
+        <a href="#">Cookie Preferences</a>
+      </div>
+      <div>
+        <div id="khelp">
+          <a id="kcontact">Contact</a>
+          <a href="#">Help center</a>
+          <a href="#">Support community</a>
+          <a href="#">Share your story</a>
+          <a href="#">Press</a>
+        </div>
+        <div id="kdownloads">
+          <a id="kapps" href="#">Download our apps</a>
+          <img src="kStore img.svg" alt="">
+          <img src="kplay img.png" alt="">
+        </div>
+      </div>
+      <div id="ksubjects">
+        <a id="kcourses">Courses</a>
+        <a href="#">Math (NCERT)</a>
+        <a href="#">Math foundations</a>
+        <a href="#">Math (Maharashtra)</a>
+        <a href="#">PACE (SOE Punjab)</a>
+        <a href="#">Science (NCERT)</a>
+        <a href="#">All State boards</a>
+        <a href="#">Explore more</a>
+        <a href="#">Khan for Educators</a>
+      </div>
+    </div>
+  </footer>
+  <div class="klanguage">
+    <div>
+      <p><a href="#" id="kl">Language<select name="English" id="kenglish">English
+            <option value="English">English</option>
+          </select></a></p>
+      <div>
+        <span id="kc">Country</span>
+        <a href="#"><img src="kus-flag.png" alt="">U.S.</a>
+        <a href="#"><img src="kindia-flag.png" alt="">India</a>
+        <a href="#"><img src="kmexico-flag.png" alt="">Mexico</a>
+        <a href="#"><img src="kindia-flag.png" alt="">Brazil</a>
+      </div>
+    </div>
+    <div id="kterms">
+      <div id="kkhan">
+        <span id="ka">© 2024 Khan Academy</span>
+        <a href="#">Terms of use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Notice</a>
+      </div>
+      <div id="klogos">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-Ws3A1pTy8if/Huy86hvw3BdMVjQRYRg+/IlFD6GPnP8eDTKt6RJQLu7oSt+DTdA1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
