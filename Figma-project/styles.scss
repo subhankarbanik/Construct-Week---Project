@@ -8,6 +8,8 @@
 header {
   background-image: url("./kbackground\ image.png");
   height: 860px;
+  max-width: 1920px;
+  margin: auto;
   background-position: center;
   background-size: cover;
 
@@ -284,108 +286,119 @@ main {
 
   margin-top: 50px;
 }
+
+.container {
+  width: auto;
+  max-width: 1320px;
+  margin: auto;
+  /* border: 1px solid black; */
+  /* height: 940.63px; */
+  margin-top: 50px;
+}
 .outer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  > h2 {
-    font-family: Inter;
-    font-size: 29px;
-    font-weight: 700;
-    line-height: 45px;
-    letter-spacing: 0em;
-    color: #05073c;
-    padding: 5px 0px 0px 15px;
-  }
-  > a {
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 28px;
-    text-decoration: none;
-    padding: 21.88px 40.8px 0px 0px;
-  }
+}
+.outer > h2 {
+  font-family: Inter;
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing: 0em;
+  color: #05073c;
+  padding: 5px 0px 0px 15px;
+}
+.outer > a {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  text-decoration: none;
+  padding: 21.88px 40.8px 0px 0px;
 }
 .inner {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin: 0px 15px 0px 15px;
-  > div {
-    border: 1px solid #e7e6e6;
-    border-radius: 12px;
-    > img {
-      padding: 11px 11px 0px 11px;
-      border-radius: 12px;
-      display: block;
-    }
-    > p:nth-of-type(1) {
-      font-family: Inter;
-      font-size: 12px;
-      font-weight: 400px;
-      line-height: 24px;
-      letter-spacing: 0em;
-      padding: 10px 0px 0px 42px;
-      margin: 0px;
-      color: #717171;
-    }
-    > h3 {
-      font-family: Inter;
-      font-size: 16px;
-      font-weight: 500px;
-      line-height: 24px;
-      letter-spacing: 0em;
-      color: #05073c;
-      margin: 0px;
-      padding-left: 21px;
-      max-width: 249.4px;
-    }
-    p:nth-of-type(2) {
-      font-family: Inter;
-      font-size: 12px;
-      font-weight: 400px;
-      line-height: 24px;
-      letter-spacing: 0em;
-      padding: 10px 0px 0px 101px;
-      margin: 0px;
-      color: #05073c;
-      max-width: 54.59px;
-    }
-    > div {
-      /* background-color: aqua; */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 258px;
-      margin: 14.3px 21px 11px 21px;
-      border-top: 1px solid gray;
-      > span {
-        font-family: Inter;
-        font-size: 13px;
-        font-weight: 400px;
-        line-height: 24px;
-        letter-spacing: 0em;
-        color: #05073c;
-      }
-      > div > span:nth-of-type(1) {
-        font-family: Inter;
-        font-size: 13px;
-        font-weight: 400px;
-        line-height: 24px;
-        letter-spacing: 0em;
-        color: #05073c;
-      }
-      > div > span:nth-of-type(2) {
-        font-family: Inter;
-        font-size: 15px;
-        font-weight: 500px;
-        line-height: 30px;
-        letter-spacing: 0em;
-        color: #05073c;
-      }
-    }
-  }
 }
+.inner > div {
+  border: 1px solid #e7e6e6;
+  border-radius: 12px;
+}
+.inner > div > img {
+  padding: 11px 11px 0px 11px;
+  border-radius: 12px;
+  display: block;
+}
+.inner > div > p:nth-of-type(1) {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  padding: 10px 0px 0px 42px;
+  margin: 0px;
+  color: #717171;
+}
+.inner > div > h3 {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #05073c;
+  margin: 0px;
+  padding-left: 21px;
+  max-width: 249.4px;
+}
+
+#inner-para{
+    font-family: Inter;
+  font-size: 12px;
+  font-weight: 400px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  padding: 10px 0px 0px 101px;
+  margin: 0px;
+  color: #05073c;
+  max-width: 54.59px;
+}
+.inner > div > div {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 258px;
+  margin: 14.3px 21px 11px 21px;
+  border-top: 1px solid gray;
+}
+.inner > div > div > span {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 400px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #05073c;
+}
+.inner > div > div > div > span:nth-of-type(1) {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 400px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #05073c;
+}
+.inner > div > div > div > span:nth-of-type(2) {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 500px;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: #05073c;
+}
+
 .Ac-blue-container {
   max-width: 1920px;
   margin: auto;

@@ -8,6 +8,8 @@
 header {
   background-image: url("./kbackground image.png");
   height: 860px;
+  max-width: 1920px;
+  margin: auto;
   background-position: center;
   background-size: cover;
 }
@@ -282,11 +284,21 @@ main p {
   margin-top: 50px;
 }
 
+.container {
+  width: auto;
+  max-width: 1320px;
+  margin: auto;
+  /* border: 1px solid black; */
+  /* height: 940.63px; */
+  margin-top: 50px;
+}
+
 .outer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .outer > h2 {
   font-family: Inter;
   font-size: 29px;
@@ -296,6 +308,7 @@ main p {
   color: #05073c;
   padding: 5px 0px 0px 15px;
 }
+
 .outer > a {
   font-family: Inter;
   font-size: 14px;
@@ -311,15 +324,18 @@ main p {
   gap: 30px;
   margin: 0px 15px 0px 15px;
 }
+
 .inner > div {
   border: 1px solid #e7e6e6;
   border-radius: 12px;
 }
+
 .inner > div > img {
   padding: 11px 11px 0px 11px;
   border-radius: 12px;
   display: block;
 }
+
 .inner > div > p:nth-of-type(1) {
   font-family: Inter;
   font-size: 12px;
@@ -330,6 +346,7 @@ main p {
   margin: 0px;
   color: #717171;
 }
+
 .inner > div > h3 {
   font-family: Inter;
   font-size: 16px;
@@ -341,7 +358,8 @@ main p {
   padding-left: 21px;
   max-width: 249.4px;
 }
-.inner > div p:nth-of-type(2) {
+
+#inner-para {
   font-family: Inter;
   font-size: 12px;
   font-weight: 400px;
@@ -352,6 +370,7 @@ main p {
   color: #05073c;
   max-width: 54.59px;
 }
+
 .inner > div > div {
   /* background-color: aqua; */
   display: flex;
@@ -361,6 +380,7 @@ main p {
   margin: 14.3px 21px 11px 21px;
   border-top: 1px solid gray;
 }
+
 .inner > div > div > span {
   font-family: Inter;
   font-size: 13px;
@@ -369,6 +389,7 @@ main p {
   letter-spacing: 0em;
   color: #05073c;
 }
+
 .inner > div > div > div > span:nth-of-type(1) {
   font-family: Inter;
   font-size: 13px;
@@ -377,6 +398,7 @@ main p {
   letter-spacing: 0em;
   color: #05073c;
 }
+
 .inner > div > div > div > span:nth-of-type(2) {
   font-family: Inter;
   font-size: 15px;
