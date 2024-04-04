@@ -18,7 +18,7 @@ Viatours epitomizes a captivating online interface, meticulously crafted to deli
 
 #### Khan Academy Mobile View
 
-<img src="./mobileview.png" alt="Desktop View" style="box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.8);">
+<img src="./mobileview.png" alt="Mobile View" style="box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.8);">
 
 ### Khan Academy Deskstop View
 
@@ -30,7 +30,7 @@ Viatours epitomizes a captivating online interface, meticulously crafted to deli
 
 ## Video Walkthrough of the project
 
-<video src="https://www.youtube.com/watch?v=7znFi13ii1I"></video>
+<video src="https://www.youtube.com/watch?v=7znFi13ii1I">Group video</video>
 
 ## Features
 
