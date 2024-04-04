@@ -10,7 +10,6 @@ Khan Academy offers practice exercises, instructional videos, and a personalized
 Viatours epitomizes a captivating online interface, meticulously crafted to deliver a seamless and vibrant journey through travel possibilities. At its core lies a sophisticated header, an inviting gateway to an array of exploratory wonders. Complemented by a sleek search bar, it beckons users to embark on their odyssey, beckoning them to seek out their desired destinations and experiences.
 
 ### Deployed Link
-
 [Live Demo Khan Academy](https://khan-academy-clone-b34.netlify.app/)<br>
 [Live Demo Viatours](https://project-learn-wise-figma-lakshya.netlify.app/)
 
@@ -29,8 +28,8 @@ Viatours epitomizes a captivating online interface, meticulously crafted to deli
 <img src="./Screenshot 2024-04-04 at 12.27.21 PM.png" alt="Desktop View" style="box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.8);">
 
 ## Video Walkthrough of the project
+[Live Demo Group video](https://youtu.be/7znFi13ii1I)
 
-<video src="https://www.youtube.com/watch?v=7znFi13ii1I">Group video</video>
 
 ## Features
 
