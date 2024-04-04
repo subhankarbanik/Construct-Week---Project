@@ -28,6 +28,10 @@ Viatours epitomizes a captivating online interface, meticulously crafted to deli
 
 <img src="./Screenshot 2024-04-04 at 12.27.21 PM.png" alt="Desktop View" style="box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.8);">
 
+## Video Walkthrough of the project
+
+<video src="https://www.youtube.com/watch?v=7znFi13ii1I"></video>
+
 ## Features
 
 - **Navbar and Footer**: Both are responsive in nature and can be adjusted according to page width, providing consistent navigation and information throughout the page.
@@ -73,7 +77,7 @@ To run this project locally:
 - [Adarsh Chaturvedi](https://github.com/Adarsh-ch)
 - [Kranti Kumar](https://github.com/Kranti00)
 - [Arijit Nath](https://github.com/Arijit9t7)
-- [Syed Fahad Ali ](https://github.com/SyedFahadAli1)
+- [Syed Fahad Ali ](https://github.com/SFahadAli)
 
 ## License
 
